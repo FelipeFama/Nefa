@@ -5,7 +5,7 @@ import partner3 from "../../images/partners/partner3.png";
 import partner4 from "../../images/partners/partner4.png";
 
 export default function PartnerSection() {
-  return(
+  return (
     <div className="px-6">
       <div className="rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20">
         <div className="container mx-auto">

@@ -3,7 +3,7 @@ import upChart from "../../images/charts/up.svg";
 import downChart from "../../images/charts/down.svg";
 
 export default function CoinRow({ image, coinName, coinPrice, coinUpTrend }) {
-  return(
+  return (
     <div className="grid grid-cols-3 mb-2 py-2 border-b border-lightgray">
       <div className="flex items-center">
         <img className="inline h-[1em] mr-2 align-middle" draggable='false' src={image}/>

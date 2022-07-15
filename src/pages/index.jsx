@@ -1,9 +1,11 @@
 import React from "react";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
+import BackToTopSection from "../components/sections/BackToTopSection";
 import BuyAndTradeSection from "../components/sections/BuyAndTradeSection";
 import CreditCardSection from "../components/sections/CreditCardSection";
 import CryptocurrencySection from "../components/sections/CryptocurrencySection";
+import FaqSection from "../components/sections/FaqSection";
 import HeroSection from "../components/sections/HeroSection";
 import PartnerSection from "../components/sections/PartnerSection";
 import SecuritySection from "../components/sections/SecuritySection";
@@ -21,7 +23,8 @@ export default function index() {
      <TradingToolsSection />
      <SecuritySection />
      <StepSection />
-     <Footer />
+     <FaqSection />
+     <BackToTopSection />
     </Layout>
   );
 }

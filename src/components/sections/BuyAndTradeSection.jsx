@@ -4,7 +4,7 @@ import buyIcon from "../../images/illustrations/buy.png";
 import PrimaryButton from "../buttons/PrimaryButton";
 
 export default function BuyAndTradeSection() {
-  return(
+  return (
     <div className="container mx-auto py-32">
       <div className="grid grid-cols-2 gap-10">
        <div className="flex items-center">

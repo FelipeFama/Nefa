@@ -16,7 +16,6 @@ export default function Navbar() {
           </div>
           <ul className="w-full h-auto flex flex-col flex-grow lg:items-center pb-4 lg:pb-0 lg:justify-end lg:flex-row origin-top duration-300 xl:space-x-2 space-y-3 lg:space-y-0 hidden lg:flex">
             <li className="w-full">
-            
              <a href="/" className="md:px-4 py-2 text-sm bg-transparent rounded-lg hover:text-primary">
                Cryptocurrency
              </a>
@@ -51,10 +50,7 @@ export default function Navbar() {
             </li>
           </ul>
        </div> 
-          
-        
-
-        <div className="flex space-x-3">
+       <div className="flex space-x-3">
           <PrimaryButton className="mr-4">
             Log In
           </PrimaryButton>

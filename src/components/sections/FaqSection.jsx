@@ -18,7 +18,7 @@ const FaqItem = ({open, title, children}) => {
   })
 
   return (
-    <div className="mb-3 border-b border-lightgray pb-4">
+    <section className="mb-3 border-b border-lightgray pb-4">
      <div className="flex justify-between py-3 cursor-pointer hover:text-primary" onClick={()=> setIsOpen(!isOpen)}>
        {title}
        <BsChevronUp className={iconClass} />
@@ -28,13 +28,13 @@ const FaqItem = ({open, title, children}) => {
          {children}
        </p>
      </div>
-    </div>
+    </section>
   );
 }
 
 export default function FaqSection() {
   return (
-    <div className="container mx-auto py-32">
+    <section className="container mx-auto py-32">
      <div className="grid md:grid-cols-2">
         <img src={faq} alt="faq bitcoin" />
        <div className="flex justify-center">
@@ -60,6 +60,6 @@ export default function FaqSection() {
          </div>
        </div>
      </div>
-   </div>
+   </section>
   );
 } 

@@ -4,7 +4,7 @@ import banks from "../../images/illustrations/banks.png"
 
 export default function SecuritySection() {
   return (
-    <div className="container mx-auto py-32">
+    <section className="container mx-auto py-32">
      <div className="grid md:grid-cols-2">
        <img src={banks} alt="bank" />
        <div className="flex justify-center">
@@ -44,6 +44,6 @@ export default function SecuritySection() {
          </div>
        </div>
      </div>
-   </div>
+   </section>
   );
 }

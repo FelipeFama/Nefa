@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4">
          <div className="md:flex md:justify-between p-6 md:border-r border-lightgray">
            <div className="mb-6">
-            <img src={logo} className=" w-2/3" alt="logo"/>
+            <img src={logo} className=" -mx-9" alt="logo"/>
            </div>
            <ul>
             <li className="mb-4"><a href="/" className="text-gray">Buy Crypto</a></li>
@@ -40,11 +40,11 @@ export default function Footer() {
          </div>
          <div className="p-6 w-full">
            <span className="text-gray">Newsletter</span>
-            <p className="text-gray font-thin">
+            <p className="text-gray font-thin w-80">
              Never miss anything crypto when you're on the go
            </p>
            <div className="flex gap-2 my-4">
-             <input type="email" className="border border-lightgray rounded-xl p-4 outline-none focus:border-primary w-full" placeholder="Enter your email" />
+             <input type="email" className="border border-lightgray rounded-xl p-4 outline-none focus:border-primary" placeholder="Enter your email" />
              <SecondaryButton className="px-5 rounded-xl">
                <BsArrowRight />
              </SecondaryButton>

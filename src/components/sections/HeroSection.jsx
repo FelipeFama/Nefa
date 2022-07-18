@@ -6,14 +6,14 @@ import SecondaryButton from "../buttons/SecondaryButton";
 
 export default function HeroSection() {
   return (
-    <section className="bg-primary bg-opacity-5 pb-24">
-     <div className="container mx-auto grid grid-cols-2">
+    <section className="bg-primary bg-opacity-5 md:pb-24">
+     <div className="container px-4 md:px-0 grid md:grid-cols-2">
        <div className="flex items-center">
          <div>
            <p className="text-primary font-bold">
              SIGN UP TODAY
            </p>
-           <h1 className="text-5xl font-bold leading-normal">
+           <h1 className="text-4xl md:text-5xl font-bold leading-normal">
              The World’s 
                <br/>
                  <span className="text-blue-gradient">
@@ -40,7 +40,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="hidden md:block">
           <img src={globoCrypto} alt="Globe" />
         </div>
      </div>

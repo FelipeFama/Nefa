@@ -12,11 +12,11 @@ export default function StepSection() {
          <h2 className="font-bold text-4xl mb-6 leading-normal">
            Get started in just a few minutes
          </h2>
-         <div className="flex justify-center gap-20">
+         <div className="md:flex justify-center gap-20">
            <div className="text-center relative px-4">
              <div className="relative">
                <img src={signupImage} className="mb-4 mx-auto" alt="bitcoin click" />
-               <img src={arrow} className="absolute top-1/2 -right-1/3" alt="arrow"/>
+               <img src={arrow} className="hidden md:block absolute top-1/2 -right-1/3" alt="arrow"/>
              </div>
               <h3 className="font-bold text-2xl mb-4">
                 Sign Up
@@ -28,7 +28,7 @@ export default function StepSection() {
            <div className="text-center relative px-4">
              <div className="relative">
                <img src={walletImage} className="mb-4 mx-auto" alt="bitcoin wallet" />
-               <img src={arrow} className="absolute top-1/2 -right-1/3" alt="arrow"/>
+               <img src={arrow} className="hidden md:block absolute top-1/2 -right-1/3" alt="arrow"/>
              </div>
              <h3 className="font-bold text-2xl mb-4">
                Fund

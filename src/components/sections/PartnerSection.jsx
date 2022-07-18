@@ -9,7 +9,7 @@ export default function PartnerSection() {
     <div className="px-6">
       <div className="rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20">
         <div className="container mx-auto">
-          <div className="text-center">
+          <div className="text-center mb-4">
             <h2 className="text-3xl font-bold mb-4">
               Trusted Partners Worldwide
             </h2>
@@ -18,11 +18,13 @@ export default function PartnerSection() {
             </p>
           </div>
           
-          <div className="flex justify-center gap-6">
-          <img src={partner1} alt="partner"/>
-           <img src={partner2} alt="partner"/>
-           <img src={partner3} alt="partner"/>
-           <img src={partner4} alt="partner"/>
+          <div className="mx-4">
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+             <img src={partner1} className="basis-1/2" alt="partner"/>
+             <img src={partner2} className="basis-1/2" alt="partner"/>
+             <img src={partner3} className="basis-1/2" alt="partner"/>
+             <img src={partner4} className="basis-1/2" alt="partner"/>
+           </div>
           </div>
         </div>
       </div>

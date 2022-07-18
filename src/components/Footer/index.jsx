@@ -7,9 +7,9 @@ export default function Footer() {
   return (
     <footer>
       <div className="container mx-auto border-y border-lightgray py-6">
-        <div className="grid grid-cols-4">
-         <div className="flex justify-center p-6 border-r border-lightgray">
-           <div>
+        <div className="grid md:grid-cols-4">
+         <div className="md:flex md:justify-between p-6 md:border-r border-lightgray">
+           <div className="mb-6">
             <img src={logo} className=" w-2/3" alt="logo"/>
            </div>
            <ul>
@@ -20,7 +20,7 @@ export default function Footer() {
             <li className="mb-4"><a href="/" className="text-gray">NFT</a></li>
            </ul>
          </div>
-         <div className="flex justify-center p-6 border-r border-lightgray">
+         <div className="md:flex md:justify-center p-6 md:border-r border-lightgray">
            <ul>
             <li className="mb-4"><a href="/" className="text-gray">Products</a></li>
             <li className="mb-4"><a href="/" className="text-gray">Abous Us</a></li>
@@ -29,7 +29,7 @@ export default function Footer() {
             <li className="mb-4"><a href="/" className="text-gray">Security</a></li>
            </ul>
          </div>
-         <div className="flex justify-center p-6 border-r border-lightgray">
+         <div className="md:flex md:justify-center p-6 md:border-r border-lightgray">
            <ul>
             <li className="mb-4"><a href="/" className="text-gray">Help Center</a></li>
             <li className="mb-4"><a href="/" className="text-gray">Contact Us</a></li>
@@ -38,13 +38,13 @@ export default function Footer() {
             <li className="mb-4"><a href="/" className="text-gray">Privacy Policy</a></li>
            </ul>
          </div>
-         <div className="p-6">
+         <div className="p-6 w-full">
            <span className="text-gray">Newsletter</span>
             <p className="text-gray font-thin">
              Never miss anything crypto when you're on the go
            </p>
            <div className="flex gap-2 my-4">
-             <input type="email" className="border border-lightgray rounded-xl p-4 outline-none focus:border-primary" placeholder="Enter your email" />
+             <input type="email" className="border border-lightgray rounded-xl p-4 outline-none focus:border-primary w-full" placeholder="Enter your email" />
              <SecondaryButton className="px-5 rounded-xl">
                <BsArrowRight />
              </SecondaryButton>

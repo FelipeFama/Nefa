@@ -45,7 +45,7 @@ export default function Footer() {
            </p>
            <div className="flex gap-2 my-4">
              <input type="email" className="border border-lightgray rounded-xl p-4 outline-none focus:border-primary" placeholder="Enter your email" />
-             <SecondaryButton className="px-5 rounded-md">
+             <SecondaryButton className="!px-5 aspect-square !rounded-xl">
                <BsArrowRight />
              </SecondaryButton>
            </div>

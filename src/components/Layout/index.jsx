@@ -6,10 +6,10 @@ export default function Layout({ children }) {
   return (
     <>
      <header>
-       <Navbar />
+      <Navbar />
      </header>
      <main>
-       {children}
+      {children}
      </main>
      <Footer />
     </>

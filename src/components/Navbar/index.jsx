@@ -1,5 +1,5 @@
 import React from "react";
-import {BsChevronDown} from "react-icons/bs"
+import {BsChevronDown, BsList} from "react-icons/bs"
 import Logo from "../../images/logo.svg"
 import PrimaryButton from "../buttons/PrimaryButton";
 import SecondaryButton from "../buttons/SecondaryButton";
@@ -9,7 +9,7 @@ export default function Navbar() {
    <nav className="bg-primary bg-opacity-5 w-full px-4">
      <div className="flex flex-col max-w-screen-xl mx-auto lg:items-center lg:justify-between lg:flex-row relative px-8 py-4">
         <div className="flex flex-col lg:flex-row items-center space-x-4 xl:space-x-8">
-          <div className="flex flex-row items-center justify-between py-6">
+          <div className="flex flex-row items-center justify-between py-6 w-full">
            <div className="w-28">
              <img src={Logo} className="w-24 xl:w-28" alt="logo Nefa"/>
            </div>
@@ -52,11 +52,16 @@ export default function Navbar() {
        </div> 
        <div className="lg:flex hidden space-x-3">
           <PrimaryButton className="mr-4">
-            Log In
+           Log In
           </PrimaryButton>
           <SecondaryButton>
            Sign Up
           </SecondaryButton>
+       </div>
+       <div className="md:hidden">
+         <button>
+           <BsList />
+         </button>
        </div>
       </div>
     </nav>

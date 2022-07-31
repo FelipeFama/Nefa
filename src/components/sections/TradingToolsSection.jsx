@@ -6,7 +6,7 @@ export default function TradingToolsSection(){
   return (
    <section className="px-6">
     <div className="rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20">
-     <div className="grid md:grid-cols-2">
+     <div className="grid md:grid-cols-2 gap-6">
        <div className="max-w-lg">
           <h2 className="font-bold text-4xl mb-6 leading-normal">
            Advanced Trading <span className="text-blue-gradient">Tools</span>

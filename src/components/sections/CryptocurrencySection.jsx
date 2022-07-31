@@ -68,16 +68,16 @@ const recentlyCoins = [{
 export default function CryptocurrencySection() {
   return (
     <section className="relative md:-mt-10">
-      <div className="mx-auto rounded-3xl bg-white py-8 px-4 shadow w-max">
-        <div className="grid md:grid-cols-3 xl:grid-cols-3 items-center">
+      <div className="container mx-auto rounded-3xl bg-white py-8 px-4 shadow w-max">
+        <div className="container grid md:grid-cols-3 items-center">
          <div className="px-4 mb-6">
            <ListCoin title='🔥 Trending' data={trendCoins} />
          </div>
          <div className="px-4 mb-6">
-           <ListCoin title='🚀  Top Gainers' data={gainerCoins} />
+           <ListCoin title='🚀 Top Gainers' data={gainerCoins} />
          </div>
          <div className="px-4 mb-6">
-           <ListCoin title='💎  Recently Added' data={recentlyCoins} />
+           <ListCoin title='💎 Recently Added' data={recentlyCoins} />
          </div>
        </div>
       </div>

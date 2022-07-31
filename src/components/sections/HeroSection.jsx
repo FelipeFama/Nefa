@@ -6,8 +6,8 @@ import SecondaryButton from "../buttons/SecondaryButton";
 
 export default function HeroSection() {
   return (
-    <section className="bg-primary bg-opacity-5 md:pb-24">
-     <div className="container px-4 md:px-0 grid md:grid-cols-2">
+    <section className="bg-primary bg-opacity-5 pt-8 pb-16 md:pt-0">
+     <div className="container px-4 md:px-0 mx-auto grid md:grid-cols-2">
        <div className="flex items-center">
          <div>
            <p className="text-primary font-bold">
@@ -29,7 +29,7 @@ export default function HeroSection() {
                 bank transfers or your credit/debit card.
               </p>
             </div>
-            <div className="flex">
+            <div className="col-span-2 flex lg:mb-12">
               <SecondaryButton className="mr-4">
                 Get Started
               </SecondaryButton>

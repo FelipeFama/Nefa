@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import classNames from "classnames";
-import { BsChevronUp} from "react-icons/bs"; 
+import { BsChevronUp } from "react-icons/bs"; 
 import faq from "../../images/illustrations/faq.png";
 
 const FaqItem = ({open, title, children}) => {
@@ -18,7 +18,7 @@ const FaqItem = ({open, title, children}) => {
   })
 
   return (
-    <section className="mb-3 border-b border-lightgray pb-4">
+    <div className="mb-3 border-b border-lightgray pb-4">
      <div className="flex justify-between py-3 cursor-pointer hover:text-primary" onClick={()=> setIsOpen(!isOpen)}>
        {title}
        <BsChevronUp className={iconClass} />
@@ -28,7 +28,7 @@ const FaqItem = ({open, title, children}) => {
          {children}
        </p>
      </div>
-    </section>
+    </div>
   );
 }
 
@@ -53,7 +53,7 @@ export default function FaqSection() {
              <FaqItem open={false} title="Do I have to buy a whole Bitcoin?">
                We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over 8 million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.
              </FaqItem>
-             <FaqItem title="How do I actually buy Bitcoin?">
+             <FaqItem open={false} title="How do I actually buy Bitcoin?">
                We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over 8 million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.
              </FaqItem>
            </div>
@@ -62,4 +62,4 @@ export default function FaqSection() {
      </div>
    </section>
   );
-} 
+}

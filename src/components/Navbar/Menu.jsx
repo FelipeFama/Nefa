@@ -1,18 +1,32 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import DropdownMenu from "./DropdownMenu";
+
 export default function Menu() {
   return (
    <>
-     <div className='hidden md:flex'>
-       <a href="/" className='mx-6 hover:text-primary'>Cryptocurrency</a>
-       <a href="/" className='mx-6 hover:text-primary'>Exchanges</a>
-       <a href="/" className='mx-6 hover:text-primary'>Watchlist</a>
-       <a href="/" className='mx-6 hover:text-primary'>NFT</a>
-       <a href="/" className='mx-6 hover:text-primary'>Portofolios</a>
-       <a href="/" className='mx-6 hover:text-primary'>
-        Product
-        <BsChevronDown className="inline ml-2" />
-       </a>
+     <div className="w-full">
+      <a href="/" className='hover:text-primary py-2 block'>Cryptocurrency</a>
      </div>
+     <div className="w-full">
+      <a href="/" className='hover:text-primary py-2 block'>Exchanges</a>
+     </div>
+     <div className="w-full">
+      <a href="/" className='hover:text-primary py-2 block'>Watchlist</a>
+     </div>
+     <div className="w-full">
+      <a href="/" className='hover:text-primary py-2 block'>NFT</a>
+     </div>
+     <div className="w-full">
+      <a href="/" className='hover:text-primary py-2 block'>Portofolios</a>
+     </div>
+     <DropdownMenu>
+       <div className="w-full">
+        <a href="/" className='hover:text-primary py-2 block'>Portofolios</a>
+       </div>
+       <div className="w-full">
+        <a href="/" className='hover:text-primary py-2 block'>Portofolios</a>
+       </div>
+     </DropdownMenu>
    </>
-  );
+ );
 }

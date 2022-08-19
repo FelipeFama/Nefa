@@ -19,7 +19,7 @@ export default function Navbar() {
     <nav className={`relative transition-all duration-400 ${dropdownOpen ? 'bg-white' : 'bg-primary'} bg-opacity-5`}>
       <div className="sticky px-4 container mx-auto top-0 py-8 flex justify-between items-center">
         <div className="flex items-center">
-          <img src={Logo} className="mr-6" alt="Neva" />
+          <img src={Logo} className="mr-6" alt="Nefa" />
           <div className='hidden mx-4 gap-8 xl:flex'>
            <Menu />
           </div>

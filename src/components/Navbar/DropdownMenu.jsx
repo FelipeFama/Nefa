@@ -8,7 +8,7 @@ export default function DropdownMenu({ children }) {
 
  return (
   <li className="w-full relative">
-    <span className='hover:text-primary py-2 cursor-pointer flex items-center justify-between text-sm' onClick={() => setOpen (!open)}>
+    <span className='hover:text-primary py-2 cursor-pointer flex items-center justify-between text-lg' onClick={() => setOpen (!open)}>
      Product
      <BsChevronDown className="inline ml-2" />
     </span>

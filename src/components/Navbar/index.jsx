@@ -17,22 +17,22 @@ export default function Navbar() {
 
   return (
     <nav className={`relative transition-all duration-400 ${dropdownOpen ? 'bg-white' : 'bg-primary'} bg-opacity-5`}>
-      <div className="sticky px-4 container mx-auto top-0 py-8 flex justify-between items-center">
+      <div className="px-4 container mx-auto top-0 py-7 flex justify-between items-center">
         <div className="flex items-center">
-          <img src={Logo} className="mr-6" alt="Nefa" />
-          <div className='hidden mx-4 gap-8 xl:flex'>
+          <img src={Logo} className="mr-2 w-24 absolute left-20" alt="Nefa" />
+          <div className='hidden mx-4 gap-8 lg:flex w-full'>
            <Menu />
           </div>
         </div>
         <div className="hidden gap-4 md:flex">
-          <SecondaryButton>
+          <SecondaryButton className="absolute right-16">
             Sign In
           </SecondaryButton>
-          <PrimaryButton>
+          <PrimaryButton >
             Sign Up
           </PrimaryButton>
         </div>
-        <div className="md:hidden text-2xl">
+        <div className="lg:hidden text-2xl">
           <button className="z-50 p-4 block transition-all" onClick={() => setDropdownOpen(!dropdownOpen)}>
             {dropdownOpen ?
               <BsX />

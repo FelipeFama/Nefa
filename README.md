@@ -1,5 +1,7 @@
 # Nefa Cryptocurrency Landing Page
 
+### Note: Project in progress
+
 ![nefa](https://user-images.githubusercontent.com/91050670/179553103-37805f20-e572-4762-a517-9b4f1e72729b.png)
 
 ## :rocket: Run Project

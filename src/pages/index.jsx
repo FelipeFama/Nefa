@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import BackToTopSection from "../components/sections/BackToTopSection";
 import BuyAndTradeSection from "../components/sections/BuyAndTradeSection";

@@ -17,14 +17,14 @@ export default function PartnerSection() {
               We're partners with countless major organisations around the globe
             </p>
           </div>
-          
+
           <div className="mx-4">
-           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-             <img src={partner1} className="basis-1/2" alt="partner"/>
-             <img src={partner2} className="basis-1/2" alt="partner"/>
-             <img src={partner3} className="basis-1/2" alt="partner"/>
-             <img src={partner4} className="basis-1/2" alt="partner"/>
-           </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <img src={partner1} className="basis-1/2" alt="partner" />
+              <img src={partner2} className="basis-1/2" alt="partner" />
+              <img src={partner3} className="basis-1/2" alt="partner" />
+              <img src={partner4} className="basis-1/2" alt="partner" />
+            </div>
           </div>
         </div>
       </div>

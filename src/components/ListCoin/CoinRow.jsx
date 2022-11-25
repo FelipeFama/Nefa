@@ -6,20 +6,24 @@ export default function CoinRow({ image, coinName, coinPrice, coinUpTrend }) {
   return (
     <div className="grid grid-cols-3 mb-2 py-2 border-b border-lightgray">
       <div className="flex items-center">
-        <img className="inline h-[1em] mr-2 align-middle" draggable='false' src={image}/>
+        <img
+          className="inline h-[1em] mr-2 align-middle"
+          draggable="false"
+          src={image}
+        />
         {coinName}
       </div>
       <div className="flex items-center">
-        {coinUpTrend ?
+        {coinUpTrend ? (
           <span className="text-green mr-1">+</span>
-          :
+        ) : (
           <span className="text-red mr-1">-</span>
-        }
+        )}
         {coinPrice}
       </div>
       <div>
         <img src={coinUpTrend ? upChart : downChart} alt="bitcoin chart" />
-     </div>
+      </div>
     </div>
   );
 }

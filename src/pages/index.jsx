@@ -15,16 +15,16 @@ import TradingToolsSection from "../components/sections/TradingToolsSection";
 export default function index() {
   return (
     <Layout>
-     <HeroSection />
-     <CryptocurrencySection />
-     <BuyAndTradeSection />
-     <PartnerSection />
-     <CreditCardSection />
-     <TradingToolsSection />
-     <SecuritySection />
-     <StepSection />
-     <FaqSection />
-     <BackToTopSection />
+      <HeroSection />
+      <CryptocurrencySection />
+      <BuyAndTradeSection />
+      <PartnerSection />
+      <CreditCardSection />
+      <TradingToolsSection />
+      <SecuritySection />
+      <StepSection />
+      <FaqSection />
+      <BackToTopSection />
     </Layout>
   );
 }

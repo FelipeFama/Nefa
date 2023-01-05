@@ -1,3 +1,10 @@
+import { Pages } from "./pages";
+import "./styles/global.css";
+
 export function App() {
-  return <div>restarting project</div>;
+  return (
+    <>
+      <Pages />
+    </>
+  );
 }

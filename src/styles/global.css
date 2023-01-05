@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
 
+html {
+  font-size: 18px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 1.12em;
 }
 
 @tailwind base;

@@ -1,9 +1,10 @@
 import React from "react";
+import Layout from "../components/Layout";
 
 export function Pages() {
   return (
     <>
-      <h1>hello project</h1>
+      <Layout />
     </>
   );
 }

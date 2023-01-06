@@ -1,8 +1,8 @@
 import React from "react";
+import { BsChevronDown } from "react-icons/bs";
 import { illustrations } from "../../context/useSections";
 import { FirstButton } from "../buttons/FirstButton";
 import { SecondButton } from "../buttons/SecondButton";
-import { BsChevronDown } from "react-icons/bs";
 
 export function HeroSection() {
   return (
@@ -26,7 +26,7 @@ export function HeroSection() {
             </p>
           </div>
           <div className="col-span-2 lg:flex gap-4 lg:mb-12">
-            <SecondButton className={""} onClick={undefined}>
+            <SecondButton className="w-full lg:w-auto mb-2" onClick={undefined}>
               Get Started
             </SecondButton>
             <FirstButton className={""} onClick={undefined}>

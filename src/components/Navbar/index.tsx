@@ -1,17 +1,8 @@
 import React from "react";
-import logoImg from "../../assets/images/logo.svg";
-import { Menu } from "./Menu";
+import { logo } from "../../context/useSections";
 import { FirstButton } from "../buttons/FirstButton";
 import { SecondButton } from "../buttons/SecondButton";
-
-const LOGO = {
-  logoImage: {
-    image: {
-      source: logoImg,
-      alt: "nefa logo",
-    },
-  },
-};
+import { Menu } from "./Menu";
 
 export function Navbar() {
   return (
@@ -20,14 +11,18 @@ export function Navbar() {
         <figure className="ml-4">
           <img
             className="h-12 mr-8"
-            src={LOGO.logoImage.image.source}
-            alt={LOGO.logoImage.image.alt}
+            src={logo.logoImage.image.source}
+            alt={logo.logoImage.image.alt}
           />
         </figure>
         <Menu />
         <div className="flex gap-3 mx-4">
-          <FirstButton />
-          <SecondButton />
+          <FirstButton className={""} onClick={undefined}>
+            Log In
+          </FirstButton>
+          <SecondButton className={""} onClick={undefined}>
+            Sign Up
+          </SecondButton>
         </div>
       </nav>
     </>

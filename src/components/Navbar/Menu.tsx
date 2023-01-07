@@ -1,5 +1,5 @@
 import React from "react";
-import { BsChevronDown } from "react-icons/bs";
+import DropdownMenu from "./DropdownMenu";
 
 export function Menu() {
   return (
@@ -20,10 +20,7 @@ export function Menu() {
         <li className="hover:text-primary transition ease-in-out delay-100">
           <a href="#">Portfolio</a>
         </li>
-        <li className="flex align-center hover:text-primary transition ease-in-out delay-100">
-          <a href="#">Products</a>
-          <BsChevronDown className="m-auto h-3 w-8" />
-        </li>
+        <DropdownMenu className={""}></DropdownMenu>
       </ul>
     </>
   );

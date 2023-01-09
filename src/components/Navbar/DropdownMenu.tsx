@@ -1,29 +1,19 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React from "react";
 
-import { BsChevronDown } from "react-icons/bs";
-
-interface Props {
-  children?: React.ReactNode;
-  className: string;
-}
-
-export default function DropdownMenu({ children }: Props) {
-  const [open, setOpen] = useState(false);
-
+export default function DropdownMenu() {
   return (
     <>
       <li className="flex align-center hover:text-primary transition ease-in-out delay-100">
-        <a href="#" onClick={() => setOpen(!open)}>
-          Products
+        <a className="relative" href="#">
+          <select className="border-none outline-none">
+            <option>Products</option>
+            <option>Exchange</option>
+            <option>Wallet</option>
+            <option>Explorer</option>
+            <option>Charts</option>
+          </select>
         </a>
-        <BsChevronDown className="m-auto h-3 w-8" />
       </li>
     </>
   );
 }
-
-DropdownMenu.propTypes = {
-  children: PropTypes.node,
-};

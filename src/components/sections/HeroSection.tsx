@@ -29,9 +29,12 @@ export function HeroSection() {
             <SecondButton className="w-full lg:w-auto mb-2" onClick={undefined}>
               Get Started
             </SecondButton>
-            <FirstButton className={""} onClick={undefined}>
+            <FirstButton
+              className="relative w-full lg:w-auto mb-2"
+              onClick={undefined}
+            >
               Download App
-              <BsChevronDown className="m-auto h-3 w-8" />
+              <BsChevronDown className="absolute top-6 left-40 h-3 w-8" />
             </FirstButton>
           </div>
         </article>

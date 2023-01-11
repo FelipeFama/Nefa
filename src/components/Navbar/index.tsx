@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BsList, BsX } from "react-icons/bs";
 import OutsideClickHandler from "react-outside-click-handler";
-import { logo } from "../../context/useSections";
+import { logo } from "../../context/global";
 import { FirstButton } from "../buttons/FirstButton";
 import { SecondButton } from "../buttons/SecondButton";
 import { Menu } from "./Menu";

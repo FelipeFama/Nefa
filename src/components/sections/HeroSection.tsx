@@ -1,6 +1,6 @@
 import React from "react";
 import { BsChevronDown } from "react-icons/bs";
-import { illustrations } from "../../context/useSections";
+import { illustrations } from "../../context/global";
 import { FirstButton } from "../buttons/FirstButton";
 import { SecondButton } from "../buttons/SecondButton";
 

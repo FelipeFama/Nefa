@@ -6,7 +6,7 @@ import { SecondButton } from "../buttons/SecondButton";
 
 export function HeroSection() {
   return (
-    <section className="bg-primary bg-opacity-5 relative pt-[140px] pb-24">
+    <section className="bg-primary bg-opacity-5 relative px-8 pt-[140px] pb-24">
       <div className="container grid md:grid-cols-2 px-4 mx-auto">
         <article>
           <h6 className="text-primary text-2xl">SIGN UP TODAY</h6>

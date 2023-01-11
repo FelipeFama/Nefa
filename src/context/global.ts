@@ -8,6 +8,10 @@ import signUpImg from "../assets/images/illustrations/signup.png";
 import walletImg from "../assets/images/illustrations/wallet.png";
 import okayImg from "../assets/images/illustrations/okay.png";
 import faqImg from "../assets/images/illustrations/faq.png";
+import partnerOne from "../assets/images/partners/partner1.png";
+import partnerTwo from "../assets/images/partners/partner2.png";
+import partnerThree from "../assets/images/partners/partner3.png";
+import partnerFour from "../assets/images/partners/partner4.png";
 
 export const logo = {
   logoImage: {
@@ -66,5 +70,24 @@ export const illustrations = {
   faqImage: {
     image: faqImg,
     alt: "faq criptocurrency",
+  },
+};
+
+export const partners = {
+  partnerOne: {
+    image: partnerOne,
+    alt: "partner one",
+  },
+  partnerTwo: {
+    image: partnerTwo,
+    alt: "partner two",
+  },
+  partnerThree: {
+    image: partnerThree,
+    alt: "partner three",
+  },
+  partnerFour: {
+    image: partnerFour,
+    alt: "partner four",
   },
 };

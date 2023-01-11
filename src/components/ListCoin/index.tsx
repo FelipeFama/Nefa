@@ -7,14 +7,16 @@ import { CoinRow } from "./CoinRow";
 interface listProps {
   title: string;
   more: string;
-  data: Array<Object>;
+  data: string[] | number[];
 }
 
 export function ListCoin({ title, more, data }: listProps) {
   return (
     <>
       <div className="flex justify-between mb-6">
-        <span className="font-bold text-lg">{emoji(title)}</span>
+        <span className="font-bold text-lg flex gap-4 items-center">
+          {emoji(title)}
+        </span>
         <a href={more} className="text-primary">
           More
           <BsChevronRight className="inline ml-2" />

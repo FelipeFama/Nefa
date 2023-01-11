@@ -1,7 +1,7 @@
 import React from "react";
 import { chart } from "../../context/cryptos";
 
-interface coinProps {
+export interface coinProps {
   image: string;
   coinName: string;
   coinPrice: number;

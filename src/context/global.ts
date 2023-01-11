@@ -12,6 +12,7 @@ import partnerOne from "../assets/images/partners/partner1.png";
 import partnerTwo from "../assets/images/partners/partner2.png";
 import partnerThree from "../assets/images/partners/partner3.png";
 import partnerFour from "../assets/images/partners/partner4.png";
+import arrowImg from "../assets/images/arrow.svg";
 
 export const logo = {
   logoImage: {
@@ -89,5 +90,12 @@ export const partners = {
   partnerFour: {
     image: partnerFour,
     alt: "partner four",
+  },
+};
+
+export const arrow = {
+  arrowImage: {
+    image: arrowImg,
+    alt: "arrow",
   },
 };

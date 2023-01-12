@@ -19,6 +19,7 @@ export function Navbar() {
     "invisible opacity-0": !dropdownOpen,
     "visible opacity-100": dropdownOpen,
   });
+
   return (
     <>
       <header

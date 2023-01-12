@@ -20,9 +20,11 @@ export function Menu() {
         <li className="hover:text-primary transition ease-in-out delay-100">
           <a href="#">Portfolio</a>
         </li>
-        <DropdownMenu className={""} onClick={close}>
+        <DropdownMenu className={""} onClick={undefined}>
           <div className="hover:text-primary transition ease-in-out delay-100 py-3 flex flex-col gap-4">
             <a href="#">Exchanges</a>
+          </div>
+          <div className="hover:text-primary transition ease-in-out delay-100 py-3 flex flex-col gap-4">
             <a href="#">Wallets</a>
           </div>
         </DropdownMenu>

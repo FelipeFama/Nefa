@@ -5,9 +5,9 @@ import { SecondButton } from "../buttons/SecondButton";
 
 export function BuyAndTradeSection() {
   return (
-    <section className="container mx-auto mt-96 flex items-center pb-24">
-      <div className="grid md:grid-cols-2 gap-10 p-12">
-        <div className="flex items-center">
+    <section className="container mx-auto mt-24 lg:mt-96 flex items-center pb-24">
+      <div className="grid lg:grid-cols-2 gap-10 p-12">
+        <div className="flex items-center md:justify-center">
           <div className="max-w-xl">
             <h2 className="font-bold text-4xl mb-6 leading-normal">
               Buy & trade on the <br /> original crypto exchange.
@@ -67,7 +67,7 @@ export function BuyAndTradeSection() {
             </SecondButton>
           </div>
         </div>
-        <figure className="row-start-1 md:col-start-2">
+        <figure className="row-start-1 xl:col-start-2">
           <img
             src={illustrations.buyImage.image.source}
             alt={illustrations.buyImage.image.alt}

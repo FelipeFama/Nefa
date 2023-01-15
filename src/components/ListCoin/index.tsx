@@ -3,21 +3,26 @@ import React from "react";
 import emoji from "react-easy-emoji";
 import { BsChevronRight } from "react-icons/bs";
 import { CoinRow } from "./CoinRow";
-
-interface listProps {
+export interface IData {
+  image: string;
+  name: string;
+  price: number;
+  uptrend: boolean;
+}
+export interface ListProps {
   title: string;
   more: string;
-  data: string[] | number[];
+  data: IData[];
 }
 
-export function ListCoin({ title, more, data }: listProps) {
+export function ListCoin({ title, more, data }: ListProps) {
   return (
     <>
       <div className="flex justify-between mb-6">
         <span className="font-bold text-lg flex gap-4 items-center">
           {emoji(title)}
         </span>
-        <a href={more} className="text-primary">
+        <a href={more} className="text-primary cursor-pointer">
           More
           <BsChevronRight className="inline ml-2" />
         </a>

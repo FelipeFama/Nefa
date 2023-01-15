@@ -18,8 +18,8 @@ export default function DropdownMenu({ children }: Props) {
         </a>
         <BsChevronDown className="m-auto h-3 w-8" />
         <div
-          className={classNames("lg:absolute top-full shadow-lg rounded-lg", {
-            "opacity-100 visible h-full lg:h-auto py-4 px-5": open,
+          className={classNames("xl:absolute top-full shadow-lg rounded-lg", {
+            "opacity-100 visible h-full xl:h-auto py-4 px-5": open,
             "opacity-0 invisible h-0": !open,
           })}
         >

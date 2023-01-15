@@ -4,13 +4,13 @@ import classNames from "classnames";
 import { BsChevronUp } from "react-icons/bs";
 import { illustrations } from "../../context/global";
 
-interface faqProps {
+interface FaqProps {
   open: boolean;
   title: string;
   children: string;
 }
 
-const FaqItem = ({ open, title, children }: faqProps) => {
+const FaqItem = ({ open, title, children }: FaqProps) => {
   const [isOpen, setIsOpen] = useState(!!open);
 
   const iconClass = classNames({

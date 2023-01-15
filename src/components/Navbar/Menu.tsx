@@ -4,7 +4,7 @@ import DropdownMenu from "./DropdownMenu";
 export function Menu() {
   return (
     <>
-      <ul className="flex gap-8">
+      <ul className="xl:flex gap-8 hidden">
         <li className="hover:text-primary transition ease-in-out delay-100">
           <a href="#">Crytocurrency</a>
         </li>

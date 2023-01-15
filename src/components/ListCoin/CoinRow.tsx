@@ -1,11 +1,10 @@
 import React from "react";
 import { chart } from "../../context/cryptos";
-
-export interface coinProps {
+interface CoinProps {
   image: string;
   coinName: string;
   coinPrice: number;
-  coinUpTrend: string;
+  coinUpTrend: boolean;
 }
 
 export function CoinRow({
@@ -13,7 +12,7 @@ export function CoinRow({
   coinName,
   coinPrice,
   coinUpTrend,
-}: coinProps) {
+}: CoinProps) {
   return (
     <div className="grid grid-cols-3 mb-2 py-2 border-b border-lightgray">
       <div className="flex items-center">

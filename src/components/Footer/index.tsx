@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
+import { BsArrowRight } from "react-icons/bs";
 import { logo } from "../../context/global";
 import { SecondButton } from "../buttons/SecondButton";
-import { BsArrowRight } from "react-icons/bs";
 
 export function Footer() {
   return (
@@ -113,7 +113,10 @@ export function Footer() {
                 className="border border-lightgray rounded-xl p-4 outline-none focus:border-primary"
                 placeholder="Enter your email"
               />
-              <SecondButton className="px-5 rounded-md" onClick={undefined}>
+              <SecondButton
+                className="!px-5 aspect-square !rounded-xl"
+                onClick={undefined}
+              >
                 <BsArrowRight />
               </SecondButton>
             </div>

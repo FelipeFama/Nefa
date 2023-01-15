@@ -16,7 +16,7 @@ export function PartnerSection() {
             </p>
           </article>
           <div className="mx-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid lg:grid-cols-2 grid-cols-1 justify-items-center gap-6">
               <img
                 src={partners.partnerOne.image}
                 alt={partners.partnerOne.alt}

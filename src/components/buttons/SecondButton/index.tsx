@@ -17,7 +17,7 @@ export function SecondButton({
     className,
   ]);
   return (
-    <button onClick={onClick} className={cx} {...props}>
+    <button type="button" onClick={onClick} className={cx} {...props}>
       {children}
     </button>
   );

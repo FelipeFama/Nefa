@@ -1,8 +1,8 @@
-import React, { useState } from "react";
 import classNames from "classnames";
-import logoImg from "../../assets/images/logo.svg";
+import React, { useState } from "react";
 import { BsList, BsX } from "react-icons/bs";
 import OutsideClickHandler from "react-outside-click-handler";
+import logoImg from "../../assets/images/logo.svg";
 import { FirstButton } from "../buttons/FirstButton";
 import { SecondButton } from "../buttons/SecondButton";
 import { Menu } from "./Menu";
@@ -15,9 +15,6 @@ export const logo = {
     },
   },
 };
-interface Props {
-  className: string;
-}
 
 export function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -64,15 +61,16 @@ export function Navbar() {
                 <OutsideClickHandler
                   onOutsideClick={() => setDropdownOpen(false)}
                 >
-                  <div className="z-20 shadow-xl bg-white p-6">
+                  <div className="z-20 shadow-xl bg-white p-6 relative">
                     <div className="gap-4 flex mb-6">
-                      <FirstButton className={""} onClick={undefined}>
+                      <FirstButton className="w-full" onClick={undefined}>
                         Log In
                       </FirstButton>
-                      <SecondButton className={""} onClick={undefined}>
+                      <SecondButton className="w-full" onClick={undefined}>
                         Sign Up
                       </SecondButton>
                     </div>
+                    <Menu />
                   </div>
                 </OutsideClickHandler>
               </div>

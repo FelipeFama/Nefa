@@ -12,7 +12,7 @@ export function FirstButton({ children, className, onClick, ...props }: Props) {
     className,
   ]);
   return (
-    <button onClick={onClick} className={cx} {...props}>
+    <button type="button" onClick={onClick} className={cx} {...props}>
       {children}
     </button>
   );

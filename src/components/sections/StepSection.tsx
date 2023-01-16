@@ -1,15 +1,42 @@
 import React from "react";
-import { illustrations, arrow } from "../../context/global";
+import arrowImg from "../../assets/images/arrow.svg";
+import okayImg from "../../assets/images/illustrations/okay.png";
+import signUpImg from "../../assets/images/illustrations/signup.png";
+import walletImg from "../../assets/images/illustrations/wallet.png";
+
+const arrow = {
+  arrowImage: {
+    image: arrowImg,
+    alt: "arrow",
+  },
+};
+
+const illustrations = {
+  signUpImage: {
+    image: {
+      source: signUpImg,
+      alt: "mouse clicking on cryptocurrency",
+    },
+  },
+  walletImage: {
+    image: walletImg,
+    alt: "cryptocurrency wallet",
+  },
+  okayImage: {
+    image: okayImg,
+    alt: "hand holding cryptocurrency",
+  },
+};
 
 export function StepSection() {
   return (
-    <section className="px-6">
+    <section className="px-8">
       <div className="rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20">
         <div className="container mx-auto text-center">
           <h2 className="font-bold text-4xl mb-6 leading-normal">
             Get started in just a few minutes
           </h2>
-          <div className="md:flex justify-center gap-24">
+          <div className="lg:flex grid justify-center gap-24">
             <article className="text-center relative px-4 mx-2">
               <figure className="relative mx-2">
                 <img
@@ -20,7 +47,7 @@ export function StepSection() {
                 <img
                   src={arrow.arrowImage.image}
                   alt={arrow.arrowImage.alt}
-                  className="hidden md:block absolute top-1/2 -right-40"
+                  className="hidden lg:block absolute top-1/2 -right-40"
                 />
               </figure>
               <h3 className="text-2xl font-bold mb-4">Sign Up</h3>
@@ -39,7 +66,7 @@ export function StepSection() {
                 <img
                   src={arrow.arrowImage.image}
                   alt={arrow.arrowImage.alt}
-                  className="hidden md:block absolute top-1/2 -right-40"
+                  className="hidden lg:block absolute top-1/2 -right-40"
                 />
               </figure>
               <h3 className="text-2xl font-bold mb-4">Fund</h3>

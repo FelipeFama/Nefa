@@ -1,8 +1,17 @@
 import React from "react";
 import { BsChevronDown } from "react-icons/bs";
-import { illustrations } from "../../context/global";
+import globeImg from "../../assets/images/illustrations/globe.png";
 import { FirstButton } from "../buttons/FirstButton";
 import { SecondButton } from "../buttons/SecondButton";
+
+const illustrations = {
+  globeImage: {
+    image: {
+      source: globeImg,
+      alt: "crypto globe",
+    },
+  },
+};
 
 export function HeroSection() {
   return (

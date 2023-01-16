@@ -1,6 +1,15 @@
 import React from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
-import { illustrations } from "../../context/global";
+import banksImg from "../../assets/images/illustrations/banks.png";
+
+const illustrations = {
+  bankImage: {
+    image: {
+      source: banksImg,
+      alt: "cryptocurrency vault",
+    },
+  },
+};
 
 export function SecuritySection() {
   return (

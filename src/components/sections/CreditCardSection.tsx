@@ -1,7 +1,16 @@
 import React from "react";
-import { illustrations } from "../../context/global";
-import { FirstButton } from "../buttons/FirstButton";
 import { BsCheckCircleFill } from "react-icons/bs";
+import creditCardImg from "../../assets/images/illustrations/credit-card.png";
+import { FirstButton } from "../buttons/FirstButton";
+
+const illustrations = {
+  creditCardImage: {
+    image: {
+      source: creditCardImg,
+      alt: "credit card",
+    },
+  },
+};
 
 export function CreditCardSection() {
   return (

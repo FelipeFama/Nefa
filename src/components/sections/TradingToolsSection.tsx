@@ -1,6 +1,15 @@
 import React from "react";
-import { illustrations } from "../../context/global";
+import tradingToolImg from "../../assets/images/illustrations/tradingtools.png";
 import { SecondButton } from "../buttons/SecondButton";
+
+const illustrations = {
+  tradingToolImage: {
+    image: {
+      source: tradingToolImg,
+      alt: "trading tool",
+    },
+  },
+};
 
 export function TradingToolsSection() {
   return (

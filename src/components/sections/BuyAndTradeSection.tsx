@@ -1,7 +1,16 @@
 import React from "react";
 import { BsChevronDown } from "react-icons/bs";
-import { illustrations } from "../../context/global";
+import buyImg from "../../assets/images/illustrations/buy.png";
 import { SecondButton } from "../buttons/SecondButton";
+
+const illustrations = {
+  buyImage: {
+    image: {
+      source: buyImg,
+      alt: "buy crypto",
+    },
+  },
+};
 
 export function BuyAndTradeSection() {
   return (

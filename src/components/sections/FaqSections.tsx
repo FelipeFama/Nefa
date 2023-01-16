@@ -1,14 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from "react";
 import classNames from "classnames";
+import React, { useState } from "react";
 import { BsChevronUp } from "react-icons/bs";
-import { illustrations } from "../../context/global";
-
+import faqImg from "../../assets/images/illustrations/faq.png";
 interface FaqProps {
   open: boolean;
   title: string;
   children: string;
 }
+
+const illustrations = {
+  faqImage: {
+    image: faqImg,
+    alt: "faq criptocurrency",
+  },
+};
 
 const FaqItem = ({ open, title, children }: FaqProps) => {
   const [isOpen, setIsOpen] = useState(!!open);

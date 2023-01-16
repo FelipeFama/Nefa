@@ -1,12 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { logo } from "../../context/global";
+import { logo } from "../Navbar";
 import { SecondButton } from "../buttons/SecondButton";
 
 export function Footer() {
   return (
-    <footer className="px-28">
+    <footer className="px-28 w-11/12">
       <div className="container mx-auto border-y border-lightgray py-6">
         <div className="grid lg:grid-cols-4">
           <div className="xl:flex md:justify-between p-6 xl:border-r border-lightgray">

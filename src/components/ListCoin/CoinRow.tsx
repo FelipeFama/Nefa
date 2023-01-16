@@ -1,9 +1,21 @@
 import React from "react";
-import { chart } from "../../context/cryptos";
+import chartup from "../../assets/images/charts/up.svg";
+import chartdown from "../../assets/images/charts/down.svg";
+
+export const chart = {
+  chartUp: {
+    image: chartup,
+    alt: "bitcoin chart",
+  },
+  chartDown: {
+    image: chartdown,
+    alt: "bitcoin chart",
+  },
+};
 interface CoinProps {
   image: string;
   coinName: string;
-  coinPrice: number;
+  coinPrice: number | string;
   coinUpTrend: boolean;
 }
 

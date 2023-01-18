@@ -15,7 +15,7 @@ npm run dev
 - UI/UX  by [Irvan Moses](https://dribbble.com/irvan_moses)
 - Project link in figma: [NEFA](https://www.figma.com/file/xxnIkkDxUIG4N6zO5jRH5Z/NEFA---Cryptocurrency-Web-App-(Community)?node-id=0%3A1)
 
-## :wrench: Tecnologias Utilizadas
+## :wrench: Technologies Used
 - Vite
 - React/Typescript
 - Tailwind-CSS

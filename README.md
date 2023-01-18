@@ -17,5 +17,5 @@ npm run dev
 
 ## :wrench: Tecnologias Utilizadas
 - Vite
-- React/Javascript
+- React/Typescript
 - Tailwind-CSS

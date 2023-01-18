@@ -32,6 +32,7 @@ export function CoinRow({
           className="inline h-[1em] mr-2 align-middle"
           draggable="false"
           src={image}
+          alt={coinName}
         />
         {coinName}
       </div>

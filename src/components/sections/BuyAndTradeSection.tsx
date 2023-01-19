@@ -14,9 +14,9 @@ const illustrations = {
 
 export function BuyAndTradeSection() {
   return (
-    <section className="container mx-auto mt-24 lg:mt-96 flex items-center pb-24">
+    <section className="container mx-auto mt-24 lg:mt-48 flex items-center pb-24">
       <div className="grid lg:grid-cols-2 gap-10 p-12">
-        <div className="flex items-center md:justify-center">
+        <form className="flex items-center md:justify-center">
           <div className="max-w-xl">
             <h2 className="font-bold text-4xl mb-6 leading-normal">
               Buy & trade on the <br /> original crypto exchange.
@@ -30,6 +30,7 @@ export function BuyAndTradeSection() {
                 <div className="border-r border-primary pr-4 md:pr-6">
                   <small className="text-primary">Amount</small>
                 </div>
+                <label htmlFor="text"></label>
                 <input
                   type="text"
                   value="5,000"
@@ -53,6 +54,7 @@ export function BuyAndTradeSection() {
                 <div className="border-r border-primary pr-4 md:pr-6">
                   <small className="text-primary">Get</small>
                 </div>
+                <label htmlFor="text"></label>
                 <input
                   type="text"
                   value="0.10901"
@@ -75,7 +77,7 @@ export function BuyAndTradeSection() {
               Buy Now
             </SecondButton>
           </div>
-        </div>
+        </form>
         <figure className="row-start-1 xl:col-start-2">
           <img
             src={illustrations.buyImage.image.source}

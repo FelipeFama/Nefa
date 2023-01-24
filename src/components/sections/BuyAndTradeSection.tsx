@@ -16,7 +16,7 @@ export function BuyAndTradeSection() {
   return (
     <section className="container mx-auto mt-24 lg:mt-48 flex items-center pb-24">
       <div className="grid lg:grid-cols-2 gap-10 p-12">
-        <form className="flex items-center md:justify-center">
+        <div className="flex items-center md:justify-center">
           <div className="max-w-xl">
             <h2 className="font-bold text-4xl mb-6 leading-normal">
               Buy & trade on the <br /> original crypto exchange.
@@ -30,7 +30,6 @@ export function BuyAndTradeSection() {
                 <div className="border-r border-primary pr-4 md:pr-6">
                   <small className="text-primary">Amount</small>
                 </div>
-                <label htmlFor="text"></label>
                 <input
                   type="text"
                   value="5,000"
@@ -40,7 +39,7 @@ export function BuyAndTradeSection() {
               <div className="border border-primary rounded-2xl py-3 md:py-4 px-4 md:px-6 flex items-center">
                 <img
                   src="/cryptocurrencies/usd.svg"
-                  alt=""
+                  alt="usd"
                   className="inline mr-2"
                 />
                 <span className="mr-4">USD</span>
@@ -54,7 +53,6 @@ export function BuyAndTradeSection() {
                 <div className="border-r border-primary pr-4 md:pr-6">
                   <small className="text-primary">Get</small>
                 </div>
-                <label htmlFor="text"></label>
                 <input
                   type="text"
                   value="0.10901"
@@ -64,7 +62,7 @@ export function BuyAndTradeSection() {
               <div className="border border-primary rounded-2xl py-3 md:py-4 px-4 md:px-6 flex items-center">
                 <img
                   src="/cryptocurrencies/btc.svg"
-                  alt=""
+                  alt="btc"
                   className="inline mr-2"
                 />
                 <span className="mr-4">BTC</span>
@@ -77,7 +75,7 @@ export function BuyAndTradeSection() {
               Buy Now
             </SecondButton>
           </div>
-        </form>
+        </div>
         <figure className="row-start-1 xl:col-start-2">
           <img
             src={illustrations.buyImage.image.source}

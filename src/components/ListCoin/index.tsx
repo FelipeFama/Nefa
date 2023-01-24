@@ -115,8 +115,9 @@ export function ListCoin({ title, more, data }: ListProps) {
           <span className="text-gray">Price</span>
           <span className="text-gray">Chart</span>
         </div>
-        {data.map(({ image, name, price, uptrend }) => (
+        {data.map(({ image, name, price, uptrend }, index) => (
           <CoinRow
+            key={index}
             image={image}
             coinName={name}
             coinPrice={price}

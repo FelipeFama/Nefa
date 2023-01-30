@@ -8,6 +8,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .bg-primary {
   background-color: linear-gradient(130deg, #468ef9, #0c66ee);
 }

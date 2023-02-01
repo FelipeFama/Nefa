@@ -2,8 +2,10 @@ import classNames from "classnames";
 import Proptypes from "prop-types";
 import { ReactSVG } from "react-svg";
 import starCircle from "../../assets/images/particles/circle1.svg";
-
-export function StarParticle() {
+interface classProps {
+  className: string;
+}
+export function StarParticle({ className }: classProps) {
   return (
     <span className={classNames(className)}>
       <ReactSVG src={starCircle} />

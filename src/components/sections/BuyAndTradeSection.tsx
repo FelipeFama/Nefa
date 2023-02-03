@@ -14,7 +14,7 @@ const illustrations = {
 
 export function BuyAndTradeSection() {
   return (
-    <section className="container mx-auto mt-24 lg:mt-48 flex items-center pb-24">
+    <section className="container mx-auto mt-24 flex items-center px-32">
       <div className="grid lg:grid-cols-2 gap-10 p-12">
         <div className="flex items-center md:justify-center">
           <div className="max-w-xl">

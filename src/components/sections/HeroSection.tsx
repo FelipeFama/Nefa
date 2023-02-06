@@ -3,6 +3,10 @@ import { BsChevronDown } from "react-icons/bs";
 import globeImg from "../../assets/images/illustrations/globe.png";
 import { FirstButton } from "../buttons/FirstButton";
 import { SecondButton } from "../buttons/SecondButton";
+import { BlueCircleParticle } from "../particles/BlueCircleParticle";
+import { OrangeCircleParticle } from "../particles/OrangeCircleParticle";
+import { PurpleCircleParticle } from "../particles/PurpleCircleParticle";
+import { StarParticle } from "../particles/StarParticle";
 
 const illustrations = {
   globeImage: {
@@ -19,6 +23,7 @@ export function HeroSection() {
       <div className="container grid md:grid-cols-2 px-4 mx-auto">
         <article>
           <h6 className="text-primary text-2xl">SIGN UP TODAY</h6>
+          <StarParticle className="absolute top-36 right-2/4 w-32" />
           <h1 className="text-6xl font-bold leading-normal">
             The World’s
             <br />
@@ -46,12 +51,15 @@ export function HeroSection() {
               <BsChevronDown className="absolute top-6 left-40 h-3 w-8" />
             </FirstButton>
           </div>
+          <PurpleCircleParticle className="absolute bottom-24 left-16" />
         </article>
         <figure className="hidden relative md:block">
+          <BlueCircleParticle className="absolute -top-24 left-32" />
           <img
             src={illustrations.globeImage.image.source}
             alt={illustrations.globeImage.image.alt}
           />
+          <OrangeCircleParticle className="absolute left-full top-56" />
         </figure>
       </div>
     </section>

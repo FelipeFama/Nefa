@@ -1,7 +1,6 @@
 import classNames from "classnames";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsList, BsX } from "react-icons/bs";
-import OutsideClickHandler from "react-outside-click-handler";
 import logoImg from "../../assets/images/logo.svg";
 import { FirstButton } from "../buttons/FirstButton";
 import { SecondButton } from "../buttons/SecondButton";
@@ -18,21 +17,44 @@ export const logo = {
 
 export function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownClass = classNames({
-    "text-base left-0 top-full right-0 absolute transition-all duration-400":
-      true,
-    "invisible opacity-0": !dropdownOpen,
-    "visible opacity-100": dropdownOpen,
-  });
+  const [backgroundWhite, setBackgroundWhite] = useState(false);
+
+  const handleWindowScroll = () => {
+    const height = window.scrollY;
+    const tresholdHeigth = 50;
+
+    if (height > tresholdHeigth) {
+      setBackgroundWhite(true);
+    } else {
+      setBackgroundWhite(false);
+    }
+  };
+
+  const handleBlackScreenClick = (e: any) => {
+    e.stopPropagation();
+    setDropdownOpen(false);
+  };
+
+  useEffect(() => {
+    setBackgroundWhite(dropdownOpen);
+  }, [dropdownOpen]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleWindowScroll);
+    return () => window.removeEventListener("scroll", handleWindowScroll);
+  }, []);
 
   return (
     <>
       <header
-        className={`flex items-center py-10 relative transition-all duration-400 ${
-          dropdownOpen ? "bg-white" : "bg-primary"
-        } bg-opacity-5`}
+        className={classNames(
+          "fixed flex items-center justify-center py-10 transition-all duration-400 w-full z-10",
+          {
+            "bg-white shadow-lg": backgroundWhite,
+          },
+        )}
       >
-        <nav className="flex items-center xl:justify-center justify-between w-full">
+        <nav className="flex items-center md:gap-72 xl:justify-center justify-between ">
           <figure className="ml-4">
             <img
               className="h-12 mr-8"
@@ -41,7 +63,7 @@ export function Navbar() {
             />
           </figure>
           <Menu />
-          <div className="hidden xl:flex gap-3 mx-4">
+          <div className="hidden md:flex gap-3 mx-4">
             <FirstButton className={""} onClick={undefined}>
               Log In
             </FirstButton>
@@ -49,30 +71,39 @@ export function Navbar() {
               Sign Up
             </SecondButton>
           </div>
-          <div className="xl:hidden text-2xl">
+          <div className="md:hidden ml-96 text-2xl">
             <button
               className="z-50 p-4 block transition-all"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               {dropdownOpen ? <BsX /> : <BsList />}
             </button>
-            <div className={dropdownClass}>
-              <div className="h-screen left-0 bg-black bg-opacity-30">
-                <OutsideClickHandler
-                  onOutsideClick={() => setDropdownOpen(false)}
-                >
-                  <div className="z-20 shadow-xl bg-white p-6 relative">
-                    <div className="gap-4 flex mb-6">
-                      <FirstButton className="w-full" onClick={undefined}>
-                        Log In
-                      </FirstButton>
-                      <SecondButton className="w-full" onClick={undefined}>
-                        Sign Up
-                      </SecondButton>
-                    </div>
+            {/* dropdown */}
+            <div
+              className={classNames({
+                "text-base left-0 top-full right-0 absolute transition-all duration-400":
+                  true,
+                "invisible opacity-0": !dropdownOpen,
+                "visible opacity-100": dropdownOpen,
+              })}
+            >
+              <div
+                className="h-screen left-0 bg-black bg-opacity-30"
+                onClick={handleBlackScreenClick}
+              >
+                <div className="z-20 shadow-xl bg-white p-6 relative">
+                  <div className="gap-4 flex mb-6">
+                    <FirstButton className="w-full" onClick={undefined}>
+                      Log In
+                    </FirstButton>
+                    <SecondButton className="w-full" onClick={undefined}>
+                      Sign Up
+                    </SecondButton>
+                  </div>
+                  <div className="mb-4">
                     <Menu />
                   </div>
-                </OutsideClickHandler>
+                </div>
               </div>
             </div>
           </div>

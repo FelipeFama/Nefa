@@ -19,7 +19,7 @@ const illustrations = {
 
 export function HeroSection() {
   return (
-    <section className="bg-primary bg-opacity-5 relative px-32 pt-[140px] pb-24">
+    <section className="bg-primary bg-opacity-5 relative px-32 pt-72 pb-24">
       <div className="container grid md:grid-cols-2 px-4 mx-auto">
         <article>
           <h6 className="text-primary text-2xl">SIGN UP TODAY</h6>

@@ -48,21 +48,25 @@ export function Navbar() {
     <>
       <header
         className={classNames(
-          "fixed flex items-center justify-center py-10 transition-all duration-400 w-full z-10",
+          "fixed flex items-center justify-center py-10 transition-all duration-700 w-full z-10",
           {
             "bg-white shadow-lg": backgroundWhite,
           },
         )}
       >
-        <nav className="flex items-center md:gap-72 xl:justify-center justify-between ">
-          <figure className="ml-4">
-            <img
-              className="h-12 mr-8"
-              src={logo.logoImage.image.source}
-              alt={logo.logoImage.image.alt}
-            />
-          </figure>
-          <Menu />
+        <nav className="flex items-center gap-32">
+          <div className="flex items-center">
+            <figure className="mx-8">
+              <img
+                className="h-12 mr-8"
+                src={logo.logoImage.image.source}
+                alt={logo.logoImage.image.alt}
+              />
+            </figure>
+            <div className="xl:flex gap-8 hidden">
+              <Menu />
+            </div>
+          </div>
           <div className="hidden md:flex gap-3 mx-4">
             <FirstButton className={""} onClick={undefined}>
               Log In
@@ -71,7 +75,7 @@ export function Navbar() {
               Sign Up
             </SecondButton>
           </div>
-          <div className="md:hidden ml-96 text-2xl">
+          <div className="md:hidden ml-80 text-2xl">
             <button
               className="z-50 p-4 block transition-all"
               onClick={() => setDropdownOpen(!dropdownOpen)}

@@ -1,6 +1,6 @@
-import { BsChevronDown } from "react-icons/bs";
+import { FaWindows, FaLinux, FaAppStore, FaAndroid } from "react-icons/fa";
 import globeImg from "../../assets/images/illustrations/globe.png";
-import { FirstButton } from "../buttons/FirstButton";
+import { DropdownButton } from "../buttons/DropdownButton/DropdownButton";
 import { SecondButton } from "../buttons/SecondButton";
 import { BlueCircleParticle } from "../particles/BlueCircleParticle";
 import { OrangeCircleParticle } from "../particles/OrangeCircleParticle";
@@ -42,13 +42,36 @@ export function HeroSection() {
             <SecondButton className="w-full lg:w-auto mb-2" onClick={undefined}>
               Get Started
             </SecondButton>
-            <FirstButton
-              className="relative w-full lg:w-auto mb-2"
-              onClick={undefined}
-            >
-              Download App
-              <BsChevronDown className="absolute top-6 left-40 h-3 w-8" />
-            </FirstButton>
+            <DropdownButton name="Download App" className="w-full lg:w-auto">
+              <a
+                href="/download/windows"
+                target="_blank"
+                className="w-full hover:bg-primary px-6 pt-4 pb-2 block hover:text-white"
+              >
+                <FaWindows className="inline mr-2" /> Windows
+              </a>
+              <a
+                href="/download/linux"
+                target="_blank"
+                className="w-full hover:bg-primary px-6 pt-4 pb-2 block hover:text-white"
+              >
+                <FaLinux className="inline mr-2" /> Linux
+              </a>
+              <a
+                href="/download/android"
+                target="_blank"
+                className="w-full hover:bg-primary px-6 pt-4 pb-2 block hover:text-white"
+              >
+                <FaAndroid className="inline mr-2" /> Android
+              </a>
+              <a
+                href="/download/ios"
+                target="_blank"
+                className="w-full hover:bg-primary px-6 pt-4 pb-2 block hover:text-white"
+              >
+                <FaAppStore className="inline mr-2" /> IOS
+              </a>
+            </DropdownButton>
           </div>
           <PurpleCircleParticle className="absolute bottom-24 left-16" />
         </article>

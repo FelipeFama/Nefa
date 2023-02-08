@@ -1,4 +1,3 @@
-import React from "react";
 import { BsChevronDown } from "react-icons/bs";
 import globeImg from "../../assets/images/illustrations/globe.png";
 import { FirstButton } from "../buttons/FirstButton";

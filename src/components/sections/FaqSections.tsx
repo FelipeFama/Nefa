@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import classNames from "classnames";
-import React, { useState } from "react";
+import { useState } from "react";
 import { BsChevronUp } from "react-icons/bs";
 import faqImg from "../../assets/images/illustrations/faq.png";
 interface FaqProps {

@@ -1,4 +1,3 @@
-import React from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import banksImg from "../../assets/images/illustrations/banks.png";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import arrowImg from "../../assets/images/arrow.svg";
 import okayImg from "../../assets/images/illustrations/okay.png";
 import signUpImg from "../../assets/images/illustrations/signup.png";

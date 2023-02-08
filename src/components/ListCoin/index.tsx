@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-key */
-import React from "react";
 import emoji from "react-easy-emoji";
 import { BsChevronRight } from "react-icons/bs";
 import { CoinRow } from "./CoinRow";

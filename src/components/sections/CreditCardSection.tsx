@@ -1,4 +1,3 @@
-import React from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import creditCardImg from "../../assets/images/illustrations/credit-card.png";
 import { FirstButton } from "../buttons/FirstButton";

@@ -1,4 +1,3 @@
-import React from "react";
 import tradingToolImg from "../../assets/images/illustrations/tradingtools.png";
 import { SecondButton } from "../buttons/SecondButton";
 

@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
 import partnerOne from "../../assets/images/partners/partner1.png";
 import partnerTwo from "../../assets/images/partners/partner2.png";
 import partnerThree from "../../assets/images/partners/partner3.png";

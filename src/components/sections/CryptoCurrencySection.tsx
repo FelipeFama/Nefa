@@ -1,4 +1,3 @@
-import React from "react";
 import { trendCoins, gainerCoins, recentlyCoins, ListCoin } from "../ListCoin";
 
 export function CryptoCurrencySection() {

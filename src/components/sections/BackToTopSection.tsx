@@ -1,4 +1,3 @@
-import React from "react";
 import { BsArrowUp } from "react-icons/bs";
 
 export function BackToTopSection() {

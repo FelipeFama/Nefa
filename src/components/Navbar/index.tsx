@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BsList, BsX } from "react-icons/bs";
 import logoImg from "../../assets/images/logo.svg";
 import { FirstButton } from "../buttons/FirstButton";

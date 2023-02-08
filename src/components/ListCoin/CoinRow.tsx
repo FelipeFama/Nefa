@@ -1,4 +1,3 @@
-import React from "react";
 import chartup from "../../assets/images/charts/up.svg";
 import chartdown from "../../assets/images/charts/down.svg";
 

@@ -13,17 +13,26 @@ export default function DropdownMenu({ children }: Props) {
 
   return (
     <>
-      <li className="flex align-center hover:text-primary transition ease-in-out delay-100 relative">
-        <a className="relative" href="#" onClick={() => setOpen(!open)}>
+      <li
+        className="flex align-center relative"
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}
+      >
+        <a
+          className="relative hover:text-primary transition ease-in-out delay-100 "
+          href="#"
+          onClick={() => setOpen(!open)}
+        >
           Products
+          <BsChevronDown className="absolute top-2 left-20 h-3 w-8" />
         </a>
-        <BsChevronDown className="m-auto h-3 w-8" />
         <ReactOutsideClickHandler onOutsideClick={() => open && setOpen(false)}>
           <div
             className={classNames(
-              "lg:absolute top-full -right-4 shadow-lg rounded-lg",
+              "lg:absolute top-full shadow-lg -left-1/2 -right-1/2 rounded-lg bg-white",
               {
-                "opacity-100 visible h-full lg:h-auto py-4 px-5": open,
+                "max-lg:relative opacity-100 visible h-full lg:h-auto py-4 px-8 max-lg:top-12":
+                  open,
                 "opacity-0 invisible h-0": !open,
               },
             )}

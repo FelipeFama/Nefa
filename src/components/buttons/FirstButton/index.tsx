@@ -8,9 +8,10 @@ interface Props {
 }
 export function FirstButton({ children, className, onClick, ...props }: Props) {
   const cx = classNames([
-    "border border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 rounded-full py-3 px-6 md:py-4 md:px-10",
+    "border border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-500 rounded-full py-3 px-6 md:py-4 md:px-10",
     className,
   ]);
+
   return (
     <button type="button" onClick={onClick} className={cx} {...props}>
       {children}

@@ -48,7 +48,7 @@ export function Navbar() {
     <>
       <header
         className={classNames(
-          "fixed flex items-center justify-center py-10 transition-all duration-700 w-full z-10",
+          "fixed flex items-center justify-center py-6 transition-all duration-700 w-full z-10",
           {
             "bg-white shadow-lg": backgroundWhite,
           },

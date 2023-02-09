@@ -1,7 +1,7 @@
+import { Fade } from "react-awesome-reveal";
 import { BsCheckCircleFill } from "react-icons/bs";
 import creditCardImg from "../../assets/images/illustrations/credit-card.png";
 import { FirstButton } from "../buttons/FirstButton";
-import Fade from "react-reveal/Fade";
 
 const illustrations = {
   creditCardImage: {
@@ -17,7 +17,7 @@ export function CreditCardSection() {
     <section className="container mx-auto py-32">
       <div className="grid md:grid-cols-2 gap-6">
         <figure className="mb-12 px-4 md:px-4">
-          <Fade top duration={3000}>
+          <Fade direction="up" duration={3000}>
             <img
               src={illustrations.creditCardImage.image.source}
               alt={illustrations.creditCardImage.image.alt}

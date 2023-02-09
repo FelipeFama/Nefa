@@ -1,5 +1,5 @@
+import { Fade } from "react-awesome-reveal";
 import { BsCheckCircleFill } from "react-icons/bs";
-import Fade from "react-reveal/Fade";
 import banksImg from "../../assets/images/illustrations/banks.png";
 
 const illustrations = {
@@ -15,7 +15,7 @@ export function SecuritySection() {
   return (
     <section className="container mx-auto py-32">
       <div className="grid md:grid-cols-2">
-        <Fade top duration={3000}>
+        <Fade direction={"up"} duration={3000}>
           <img
             src={illustrations.bankImage.image.source}
             alt={illustrations.bankImage.image.alt}

@@ -1,4 +1,4 @@
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import buyImg from "../../assets/images/illustrations/buy.png";
 import { Select } from "../Select";
 import { SecondButton } from "../buttons/SecondButton";
@@ -70,7 +70,7 @@ export function BuyAndTradeSection() {
             </SecondButton>
           </div>
         </div>
-        <Fade top duration={3000}>
+        <Fade direction="up" duration={3000}>
           <figure className="row-start-1 xl:col-start-2">
             <img
               src={illustrations.buyImage.image.source}

@@ -1,4 +1,4 @@
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import arrowImg from "../../assets/images/arrow.svg";
 import okayImg from "../../assets/images/illustrations/okay.png";
 import signUpImg from "../../assets/images/illustrations/signup.png";
@@ -37,7 +37,7 @@ export function StepSection() {
             Get started in just a few minutes
           </h2>
           <div className="lg:flex grid justify-center gap-24">
-            <Fade top>
+            <Fade direction={"up"}>
               <article className="text-center relative px-4 mx-2">
                 <figure className="relative mx-2">
                   <img
@@ -58,7 +58,7 @@ export function StepSection() {
                 </p>
               </article>
             </Fade>
-            <Fade top delay={500}>
+            <Fade direction={"up"} delay={500}>
               <article className="text-center relative px-4 mx-2">
                 <figure className="relative mx-2">
                   <img
@@ -79,7 +79,7 @@ export function StepSection() {
                 </p>
               </article>
             </Fade>
-            <Fade top delay={1000}>
+            <Fade direction={"up"} delay={1000}>
               <article className="text-center relative px-4 mx-2">
                 <figure className="relative mx-2">
                   <img

@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import classNames from "classnames";
 import { useState } from "react";
+import Fade from "react-reveal/Fade";
 import { BsChevronUp } from "react-icons/bs";
 import faqImg from "../../assets/images/illustrations/faq.png";
 interface FaqProps {
@@ -49,10 +50,12 @@ export function FaqSections() {
   return (
     <section className="container mx-auto py-32">
       <div className="grid md:grid-cols-2">
-        <img
-          src={illustrations.faqImage.image}
-          alt={illustrations.faqImage.alt}
-        />
+        <Fade top duration={3000}>
+          <img
+            src={illustrations.faqImage.image}
+            alt={illustrations.faqImage.alt}
+          />
+        </Fade>
         <div className="flex justify-center">
           <div className="max-w-xl">
             <span className="text-primary">SUPPORT</span>

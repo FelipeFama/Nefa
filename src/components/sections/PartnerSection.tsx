@@ -3,6 +3,7 @@ import partnerOne from "../../assets/images/partners/partner1.png";
 import partnerTwo from "../../assets/images/partners/partner2.png";
 import partnerThree from "../../assets/images/partners/partner3.png";
 import partnerFour from "../../assets/images/partners/partner4.png";
+import Fade from "react-reveal/Fade";
 
 const partners = {
   partnerOne: {
@@ -38,26 +39,34 @@ export function PartnerSection() {
           </article>
           <div className="mx-4">
             <figure className="grid lg:grid-cols-4 grid-cols-1 justify-items-center gap-6">
-              <img
-                src={partners.partnerOne.image}
-                alt={partners.partnerOne.alt}
-                className="basis-1/2"
-              />
-              <img
-                src={partners.partnerTwo.image}
-                alt={partners.partnerTwo.alt}
-                className="basis-1/2"
-              />
-              <img
-                src={partners.partnerThree.image}
-                alt={partners.partnerThree.alt}
-                className="basis-1/2"
-              />
-              <img
-                src={partners.partnerFour.image}
-                alt={partners.partnerFour.alt}
-                className="basis-1/2"
-              />
+              <Fade top>
+                <img
+                  src={partners.partnerOne.image}
+                  alt={partners.partnerOne.alt}
+                  className="basis-1/2"
+                />
+              </Fade>
+              <Fade top delay={200}>
+                <img
+                  src={partners.partnerTwo.image}
+                  alt={partners.partnerTwo.alt}
+                  className="basis-1/2"
+                />
+              </Fade>
+              <Fade top delay={400}>
+                <img
+                  src={partners.partnerThree.image}
+                  alt={partners.partnerThree.alt}
+                  className="basis-1/2"
+                />
+              </Fade>
+              <Fade top delay={600}>
+                <img
+                  src={partners.partnerFour.image}
+                  alt={partners.partnerFour.alt}
+                  className="basis-1/2"
+                />
+              </Fade>
             </figure>
           </div>
         </div>

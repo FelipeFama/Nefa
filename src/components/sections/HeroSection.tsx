@@ -1,3 +1,4 @@
+import Fade from "react-reveal/Fade";
 import { FaWindows, FaLinux, FaAppStore, FaAndroid } from "react-icons/fa";
 import globeImg from "../../assets/images/illustrations/globe.png";
 import { DropdownButton } from "../buttons/DropdownButton/DropdownButton";
@@ -75,12 +76,15 @@ export function HeroSection() {
           </div>
           <PurpleCircleParticle className="absolute bottom-24 left-16" />
         </article>
+
         <figure className="hidden relative md:block">
           <BlueCircleParticle className="absolute -top-24 left-32" />
-          <img
-            src={illustrations.globeImage.image.source}
-            alt={illustrations.globeImage.image.alt}
-          />
+          <Fade top duration={3000}>
+            <img
+              src={illustrations.globeImage.image.source}
+              alt={illustrations.globeImage.image.alt}
+            />
+          </Fade>
           <OrangeCircleParticle className="absolute left-full top-56" />
         </figure>
       </div>

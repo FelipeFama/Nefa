@@ -1,3 +1,4 @@
+import Fade from "react-reveal/Fade";
 import tradingToolImg from "../../assets/images/illustrations/tradingtools.png";
 import { SecondButton } from "../buttons/SecondButton";
 
@@ -54,10 +55,12 @@ export function TradingToolsSection() {
             </a>
           </div>
           <figure className="row-start-1 mb-8">
-            <img
-              src={illustrations.tradingToolImage.image.source}
-              alt={illustrations.tradingToolImage.image.alt}
-            />
+            <Fade top duration={3000}>
+              <img
+                src={illustrations.tradingToolImage.image.source}
+                alt={illustrations.tradingToolImage.image.alt}
+              />
+            </Fade>
           </figure>
         </div>
       </div>

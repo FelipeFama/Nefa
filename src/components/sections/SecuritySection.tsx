@@ -1,4 +1,5 @@
 import { BsCheckCircleFill } from "react-icons/bs";
+import Fade from "react-reveal/Fade";
 import banksImg from "../../assets/images/illustrations/banks.png";
 
 const illustrations = {
@@ -14,10 +15,12 @@ export function SecuritySection() {
   return (
     <section className="container mx-auto py-32">
       <div className="grid md:grid-cols-2">
-        <img
-          src={illustrations.bankImage.image.source}
-          alt={illustrations.bankImage.image.alt}
-        />
+        <Fade top duration={3000}>
+          <img
+            src={illustrations.bankImage.image.source}
+            alt={illustrations.bankImage.image.alt}
+          />
+        </Fade>
         <article className="flex justify-center">
           <div className="max-w-xl">
             <h2 className="font-bold text-4xl mb-6 leading-normal">

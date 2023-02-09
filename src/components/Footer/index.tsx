@@ -18,27 +18,42 @@ export function Footer() {
             </figure>
             <ul>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   Buy Crypto
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   Exchanges
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   Watchlist
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   Portfolio
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   NFT
                 </a>
               </li>
@@ -47,27 +62,42 @@ export function Footer() {
           <div className="xl:flex md:justify-center p-6 xl:border-r border-lightgray">
             <ul>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   Products
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   Abous Us
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   Careers
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   Blog
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   Security
                 </a>
               </li>
@@ -76,27 +106,42 @@ export function Footer() {
           <div className="xl:flex md:justify-center p-6 xl:border-r border-lightgray">
             <ul>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   Help Center
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   Contact Us
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   System Status
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   Area of Avaibility
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="text-gray">
+                <a
+                  href="#"
+                  className="text-gray hover:text-primary transition ease-in-out delay-100"
+                >
                   Privacy Policy
                 </a>
               </li>

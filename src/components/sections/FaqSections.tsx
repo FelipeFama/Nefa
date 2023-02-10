@@ -1,9 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import classNames from "classnames";
+import { motion } from "framer-motion";
 import { useState } from "react";
-import { Fade } from "react-awesome-reveal";
 import { BsChevronUp } from "react-icons/bs";
 import faqImg from "../../assets/images/illustrations/faq.png";
+import { fadeIn } from "../../utils/motion";
 interface FaqProps {
   open: boolean;
   title: string;
@@ -48,16 +49,24 @@ const FaqItem = ({ open, title, children }: FaqProps) => {
 };
 export function FaqSections() {
   return (
-    <section className="container mx-auto py-32">
+    <motion.section
+      className="container mx-auto py-32"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       <div className="grid md:grid-cols-2">
-        <Fade direction="up" duration={3000}>
-          <img
-            src={illustrations.faqImage.image}
-            alt={illustrations.faqImage.alt}
-          />
-        </Fade>
+        <motion.img
+          variants={fadeIn("right", "tween", 0.3, 2)}
+          src={illustrations.faqImage.image}
+          alt={illustrations.faqImage.alt}
+        />
+
         <div className="flex justify-center">
-          <div className="max-w-xl">
+          <motion.div
+            className="max-w-xl"
+            variants={fadeIn("left", "tween", 0.3, 2)}
+          >
             <span className="text-primary">SUPPORT</span>
             <h2 className="font-bold text-4xl mb-6 leading-normal">
               Frequently asked questions
@@ -96,9 +105,9 @@ export function FaqSections() {
                 app, secure wallet, and range of features.
               </FaqItem>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

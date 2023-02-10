@@ -1,6 +1,7 @@
-import { Fade } from "react-awesome-reveal";
+import { motion } from "framer-motion";
 import { BsCheckCircleFill } from "react-icons/bs";
 import creditCardImg from "../../assets/images/illustrations/credit-card.png";
+import { fadeIn } from "../../utils/motion";
 import { FirstButton } from "../buttons/FirstButton";
 
 const illustrations = {
@@ -14,17 +15,24 @@ const illustrations = {
 
 export function CreditCardSection() {
   return (
-    <section className="container mx-auto py-32">
+    <motion.section
+      className="container mx-auto py-32"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       <div className="grid md:grid-cols-2 gap-6">
         <figure className="mb-12 px-4 md:px-4">
-          <Fade direction="up" duration={3000}>
-            <img
-              src={illustrations.creditCardImage.image.source}
-              alt={illustrations.creditCardImage.image.alt}
-            />
-          </Fade>
+          <motion.img
+            variants={fadeIn("right", "tween", 0.3, 2)}
+            src={illustrations.creditCardImage.image.source}
+            alt={illustrations.creditCardImage.image.alt}
+          />
         </figure>
-        <article className="flex justify-center">
+        <motion.article
+          className="flex justify-center"
+          variants={fadeIn("left", "tween", 0.3, 2)}
+        >
           <div className="max-w-md">
             <h2 className="font-bold text-4xl mb-6 leading-normal">
               Introducing the <span className="text-blue-gradient">NEFA</span>
@@ -54,8 +62,8 @@ export function CreditCardSection() {
               Join the waitlist
             </FirstButton>
           </div>
-        </article>
+        </motion.article>
       </div>
-    </section>
+    </motion.section>
   );
 }

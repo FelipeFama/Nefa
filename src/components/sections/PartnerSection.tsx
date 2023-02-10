@@ -1,9 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
+import { motion } from "framer-motion";
 import partnerOne from "../../assets/images/partners/partner1.png";
 import partnerTwo from "../../assets/images/partners/partner2.png";
 import partnerThree from "../../assets/images/partners/partner3.png";
 import partnerFour from "../../assets/images/partners/partner4.png";
-import { Fade } from "react-awesome-reveal";
+import { slideIn } from "../../utils/motion";
 
 const partners = {
   partnerOne: {
@@ -26,7 +27,12 @@ const partners = {
 
 export function PartnerSection() {
   return (
-    <section className="px-6">
+    <motion.section
+      className="px-6"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       <div className="rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20">
         <div className="container mx-auto">
           <article className="text-center mb-4">
@@ -39,38 +45,34 @@ export function PartnerSection() {
           </article>
           <div className="mx-4">
             <figure className="grid lg:grid-cols-4 grid-cols-1 justify-items-center gap-6">
-              <Fade direction={"up"}>
-                <img
-                  src={partners.partnerOne.image}
-                  alt={partners.partnerOne.alt}
-                  className="basis-1/2"
-                />
-              </Fade>
-              <Fade direction={"up"} delay={200}>
-                <img
-                  src={partners.partnerTwo.image}
-                  alt={partners.partnerTwo.alt}
-                  className="basis-1/2"
-                />
-              </Fade>
-              <Fade direction={"up"} delay={400}>
-                <img
-                  src={partners.partnerThree.image}
-                  alt={partners.partnerThree.alt}
-                  className="basis-1/2"
-                />
-              </Fade>
-              <Fade direction={"up"} delay={600}>
-                <img
-                  src={partners.partnerFour.image}
-                  alt={partners.partnerFour.alt}
-                  className="basis-1/2"
-                />
-              </Fade>
+              <motion.img
+                src={partners.partnerOne.image}
+                alt={partners.partnerOne.alt}
+                className="basis-1/2"
+                variants={slideIn("right", "spring", 0.2, 2)}
+              />
+              <motion.img
+                src={partners.partnerTwo.image}
+                alt={partners.partnerTwo.alt}
+                className="basis-1/2"
+                variants={slideIn("right", "spring", 0.2, 3)}
+              />
+              <motion.img
+                src={partners.partnerThree.image}
+                alt={partners.partnerThree.alt}
+                className="basis-1/2"
+                variants={slideIn("right", "spring", 0.2, 4)}
+              />
+              <motion.img
+                src={partners.partnerFour.image}
+                alt={partners.partnerFour.alt}
+                className="basis-1/2"
+                variants={slideIn("right", "spring", 0.2, 5)}
+              />
             </figure>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

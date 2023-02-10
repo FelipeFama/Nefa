@@ -1,4 +1,5 @@
-import { Fade } from "react-awesome-reveal";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../utils/motion";
 import tradingToolImg from "../../assets/images/illustrations/tradingtools.png";
 import { SecondButton } from "../buttons/SecondButton";
 
@@ -13,10 +14,18 @@ const illustrations = {
 
 export function TradingToolsSection() {
   return (
-    <section className="px-6">
+    <motion.section
+      className="px-6"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       <div className="rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20">
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="max-w-lg">
+          <motion.div
+            className="max-w-lg"
+            variants={fadeIn("left", "tween", 0.3, 2)}
+          >
             <h2 className="font-bold text-4xl mb-6 leading-normal">
               Advanced Trading <span className="text-blue-gradient">Tools</span>
             </h2>
@@ -53,17 +62,16 @@ export function TradingToolsSection() {
             <a href="#" className="py-4 px-10 text-primary underline">
               Learn More
             </a>
-          </div>
+          </motion.div>
           <figure className="row-start-1 mb-8">
-            <Fade direction={"up"} duration={3000}>
-              <img
-                src={illustrations.tradingToolImage.image.source}
-                alt={illustrations.tradingToolImage.image.alt}
-              />
-            </Fade>
+            <motion.img
+              variants={fadeIn("right", "tween", 0.3, 2)}
+              src={illustrations.tradingToolImage.image.source}
+              alt={illustrations.tradingToolImage.image.alt}
+            />
           </figure>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

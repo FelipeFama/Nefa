@@ -1,6 +1,7 @@
-import { Fade } from "react-awesome-reveal";
+import { motion } from "framer-motion";
 import { FaWindows, FaLinux, FaAppStore, FaAndroid } from "react-icons/fa";
 import globeImg from "../../assets/images/illustrations/globe.png";
+import { fadeIn } from "../../utils/motion";
 import { DropdownButton } from "../buttons/DropdownButton/DropdownButton";
 import { SecondButton } from "../buttons/SecondButton";
 import { BlueCircleParticle } from "../particles/BlueCircleParticle";
@@ -19,27 +20,46 @@ const illustrations = {
 
 export function HeroSection() {
   return (
-    <section className="bg-primary bg-opacity-5 relative px-32 pt-72 pb-24">
+    <motion.section
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+      className="bg-primary bg-opacity-5 relative px-32 pt-72 pb-24"
+    >
       <div className="container grid md:grid-cols-2 px-4 mx-auto">
         <article>
-          <h6 className="text-primary text-2xl">SIGN UP TODAY</h6>
+          <motion.h6
+            className="text-primary text-2xl"
+            variants={fadeIn("right", "tween", 0.3, 2)}
+          >
+            SIGN UP TODAY
+          </motion.h6>
           <StarParticle className="absolute top-36 right-2/4 w-32" />
-          <h1 className="text-6xl font-bold leading-normal">
+          <motion.h1
+            className="text-6xl font-bold leading-normal"
+            variants={fadeIn("right", "tween", 0.3, 2)}
+          >
             The World’s
             <br />
             <span className="text-blue-gradient">Fastest Growing</span>
             <br />
             Crypto Web App
-          </h1>
-          <div className="mt-4 mb-8">
+          </motion.h1>
+          <motion.div
+            className="mt-4 mb-8"
+            variants={fadeIn("right", "tween", 0.3, 2)}
+          >
             <p className="text-gray">
               Buy and sell 200+ cryptocurrencies with 20+ flat currencies using
             </p>
             <p className="text-gray">
               bank transfers or your credit/debit card.
             </p>
-          </div>
-          <div className="col-span-2 lg:flex gap-4 lg:mb-12">
+          </motion.div>
+          <motion.div
+            className="col-span-2 lg:flex gap-4 lg:mb-12"
+            variants={fadeIn("right", "tween", 0.3, 2)}
+          >
             <SecondButton className="w-full lg:w-auto mb-2" onClick={undefined}>
               Get Started
             </SecondButton>
@@ -73,20 +93,19 @@ export function HeroSection() {
                 <FaAppStore className="inline mr-2" /> IOS
               </a>
             </DropdownButton>
-          </div>
-          <PurpleCircleParticle className="absolute bottom-24 left-16" />
+          </motion.div>
+          <PurpleCircleParticle className="absolute bottom-24 left-20" />
         </article>
-        <Fade direction={"up"} duration={3000}>
-          <figure className="hidden relative md:block">
-            <BlueCircleParticle className="absolute -top-24 left-32" />
-            <img
-              src={illustrations.globeImage.image.source}
-              alt={illustrations.globeImage.image.alt}
-            />
-            <OrangeCircleParticle className="absolute left-full top-56" />
-          </figure>
-        </Fade>
+        <motion.figure className="hidden relative md:block">
+          <BlueCircleParticle className="absolute -top-24 left-32" />
+          <motion.img
+            variants={fadeIn("left", "tween", 0.3, 2)}
+            src={illustrations.globeImage.image.source}
+            alt={illustrations.globeImage.image.alt}
+          />
+          <OrangeCircleParticle className="absolute left-full top-56" />
+        </motion.figure>
       </div>
-    </section>
+    </motion.section>
   );
 }

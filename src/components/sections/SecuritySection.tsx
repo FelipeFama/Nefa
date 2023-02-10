@@ -1,6 +1,7 @@
-import { Fade } from "react-awesome-reveal";
+import { motion } from "framer-motion";
 import { BsCheckCircleFill } from "react-icons/bs";
 import banksImg from "../../assets/images/illustrations/banks.png";
+import { fadeIn } from "../../utils/motion";
 
 const illustrations = {
   bankImage: {
@@ -13,15 +14,22 @@ const illustrations = {
 
 export function SecuritySection() {
   return (
-    <section className="container mx-auto py-32">
+    <motion.section
+      className="container mx-auto py-32"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       <div className="grid md:grid-cols-2">
-        <Fade direction={"up"} duration={3000}>
-          <img
-            src={illustrations.bankImage.image.source}
-            alt={illustrations.bankImage.image.alt}
-          />
-        </Fade>
-        <article className="flex justify-center">
+        <motion.img
+          variants={fadeIn("right", "tween", 0.3, 2)}
+          src={illustrations.bankImage.image.source}
+          alt={illustrations.bankImage.image.alt}
+        />
+        <motion.article
+          className="flex justify-center"
+          variants={fadeIn("left", "tween", 0.3, 2)}
+        >
           <div className="max-w-xl">
             <h2 className="font-bold text-4xl mb-6 leading-normal">
               Industry-leading security from day oneI
@@ -62,8 +70,8 @@ export function SecuritySection() {
               </li>
             </ul>
           </div>
-        </article>
+        </motion.article>
       </div>
-    </section>
+    </motion.section>
   );
 }

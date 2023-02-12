@@ -1,6 +1,12 @@
 # Nefa Cryptocurrency Landing Page
 
-![nefa](https://user-images.githubusercontent.com/91050670/179553103-37805f20-e572-4762-a517-9b4f1e72729b.png)
+## Desktop Layout
+
+![nefa-desktop](https://user-images.githubusercontent.com/91050670/218287462-4daaf3d5-2c65-47a8-be1d-30fac8e920cd.png)
+
+## Responsive Layout
+
+![nefa-mobile](https://user-images.githubusercontent.com/91050670/218287515-b5a5cb99-8852-4ccd-9dff-102312e7d6c4.png)
 
 ## :rocket: Run Project
 
@@ -18,4 +24,5 @@ npm run dev
 ## :wrench: Technologies Used
 - Vite
 - React/Typescript
-- Tailwind-CSS
+- TailwindCSS
+- Framer Motion

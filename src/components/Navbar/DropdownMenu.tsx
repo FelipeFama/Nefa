@@ -3,11 +3,13 @@ import Proptypes from "prop-types";
 import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import ReactOutsideClickHandler from "react-outside-click-handler";
+
 interface Props {
   children?: React.ReactNode;
   className: string;
   onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }
+
 export default function DropdownMenu({ children }: Props) {
   const [open, setOpen] = useState(false);
 

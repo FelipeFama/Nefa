@@ -26,7 +26,7 @@ export function CoinRow({
   coinUpTrend,
 }: CoinProps) {
   return (
-    <div className="grid grid-cols-3 mb-2 py-2 border-b border-lightgray">
+    <div className="grid grid-cols-3 mb-2 py-2 border-b border-lightgray text-sm w-max">
       <div className="flex items-center">
         <img
           className="inline h-[1em] mr-2 align-middle"

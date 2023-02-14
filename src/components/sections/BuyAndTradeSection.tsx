@@ -29,7 +29,7 @@ export function BuyAndTradeSection() {
       whileInView="show"
       viewport={{ once: true, amount: "some" }}
     >
-      <div className="grid lg:grid-cols-2 gap-10 px-16 lg:p-12">
+      <div className="grid lg:grid-cols-2 max-md:justify-items-center gap-10 px-16 lg:p-12">
         <div className="flex items-center md:justify-center">
           <motion.div
             className="max-w-xl"

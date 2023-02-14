@@ -9,6 +9,7 @@ interface IData {
   price: number | string;
   uptrend: boolean;
 }
+
 interface ListProps {
   title: string;
   more: string;

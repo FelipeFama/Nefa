@@ -26,7 +26,7 @@ export function HeroSection() {
       viewport={{ once: true, amount: "some" }}
       className="bg-primary bg-opacity-5 relative px-32 pt-72 pb-24"
     >
-      <div className="container grid md:grid-cols-2 max-sm:justify-center px-4 mx-auto">
+      <div className="container grid md:grid-cols-2 max-md:justify-items-center px-4 mx-auto">
         <article>
           <motion.h6
             className="text-primary text-2xl"

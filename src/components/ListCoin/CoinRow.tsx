@@ -11,6 +11,7 @@ export const chart = {
     alt: "bitcoin chart",
   },
 };
+
 interface CoinProps {
   image: string;
   coinName: string;

@@ -54,7 +54,7 @@ export function Navbar() {
           },
         )}
       >
-        <nav className="flex items-center gap-48 md:gap-20">
+        <nav className="flex items-center gap-48 max-lg:w-full max-lg:justify-between md:gap-20">
           <div className="flex items-center">
             <figure className="sm:mx-8 m-auto">
               <img

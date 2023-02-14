@@ -4,9 +4,11 @@ import Proptypes from "prop-types";
 import { ReactSVG } from "react-svg";
 import purpleCircle from "../../assets/images/particles/circle2.svg";
 import { fadeIn } from "../../utils/motion";
+
 interface classProps {
   className: string;
 }
+
 export function PurpleCircleParticle({ className }: classProps) {
   return (
     <motion.span

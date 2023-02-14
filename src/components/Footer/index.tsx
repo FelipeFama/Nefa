@@ -6,11 +6,11 @@ import { SecondButton } from "../buttons/SecondButton";
 
 export function Footer() {
   return (
-    <footer className="px-28 w-11/12">
+    <footer className="px-28 max-md:px-4 w-11/12">
       <div className="container mx-auto border-y border-lightgray py-6">
         <div className="grid lg:grid-cols-4">
           <div className="xl:flex md:justify-between p-6 xl:border-r border-lightgray">
-            <figure className="mb-6 -ml-12">
+            <figure className="mb-6 max-lg:mx-auto -ml-12">
               <img
                 src={logo.logoImage.image.source}
                 alt={logo.logoImage.image.alt}

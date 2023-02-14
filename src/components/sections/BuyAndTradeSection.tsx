@@ -24,7 +24,7 @@ const inputChangeHandler = (e: any) => {
 export function BuyAndTradeSection() {
   return (
     <motion.section
-      className="container mx-auto mt-24 flex items-center lg:px-32"
+      className="container mx-auto mt-24 flex items-center"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: "some" }}

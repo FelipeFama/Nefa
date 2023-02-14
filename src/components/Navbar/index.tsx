@@ -54,11 +54,11 @@ export function Navbar() {
           },
         )}
       >
-        <nav className="flex items-center gap-32">
+        <nav className="flex items-center gap-48 md:gap-20">
           <div className="flex items-center">
-            <figure className="mx-8">
+            <figure className="sm:mx-8 m-auto">
               <img
-                className="h-12 mr-8"
+                className="h-12 max-sm:mx-8 mr-8"
                 src={logo.logoImage.image.source}
                 alt={logo.logoImage.image.alt}
               />
@@ -75,7 +75,7 @@ export function Navbar() {
               Sign Up
             </SecondButton>
           </div>
-          <div className="md:hidden ml-80 text-2xl">
+          <div className="md:hidden sm:ml-80 text-2xl">
             <button
               className="z-50 p-4 block transition-all"
               onClick={() => setDropdownOpen(!dropdownOpen)}

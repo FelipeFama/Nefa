@@ -24,12 +24,12 @@ const inputChangeHandler = (e: any) => {
 export function BuyAndTradeSection() {
   return (
     <motion.section
-      className="container mx-auto mt-24 flex items-center px-32"
+      className="container mx-auto mt-24 flex items-center lg:px-32"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: "some" }}
     >
-      <div className="grid lg:grid-cols-2 gap-10 p-12">
+      <div className="grid lg:grid-cols-2 gap-10 px-16 lg:p-12">
         <div className="flex items-center md:justify-center">
           <motion.div
             className="max-w-xl"

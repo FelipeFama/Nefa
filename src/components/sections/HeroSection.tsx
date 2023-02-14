@@ -26,7 +26,7 @@ export function HeroSection() {
       viewport={{ once: true, amount: "some" }}
       className="bg-primary bg-opacity-5 relative px-32 pt-72 pb-24"
     >
-      <div className="container grid md:grid-cols-2 px-4 mx-auto">
+      <div className="container grid md:grid-cols-2 max-sm:justify-center px-4 mx-auto">
         <article>
           <motion.h6
             className="text-primary text-2xl"
@@ -36,7 +36,7 @@ export function HeroSection() {
           </motion.h6>
           <StarParticle className="absolute top-36 right-2/4 w-32" />
           <motion.h1
-            className="text-6xl font-bold leading-normal"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold leading-normal"
             variants={fadeIn("right", "tween", 0.3, 2)}
           >
             The World’s
@@ -57,7 +57,7 @@ export function HeroSection() {
             </p>
           </motion.div>
           <motion.div
-            className="col-span-2 lg:flex gap-4 lg:mb-12"
+            className="col-span-2 lg:flex gap-4 lg:mb-12 w-96 lg:w-full"
             variants={fadeIn("right", "tween", 0.3, 2)}
           >
             <SecondButton className="w-full lg:w-auto mb-2" onClick={undefined}>

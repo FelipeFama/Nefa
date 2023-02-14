@@ -57,7 +57,7 @@ export function HeroSection() {
             </p>
           </motion.div>
           <motion.div
-            className="col-span-2 lg:flex gap-4 lg:mb-12 w-96 lg:w-full"
+            className="col-span-2 lg:flex gap-4 lg:mb-12 w-96 lg:w-max"
             variants={fadeIn("right", "tween", 0.3, 2)}
           >
             <SecondButton className="w-full lg:w-auto mb-2" onClick={undefined}>

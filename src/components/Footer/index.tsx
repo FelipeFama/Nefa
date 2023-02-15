@@ -160,6 +160,7 @@ export function Footer() {
               />
               <SecondButton
                 className="!px-5 aspect-square !rounded-xl"
+                aria-label="Arrow Right"
                 onClick={undefined}
               >
                 <BsArrowRight />

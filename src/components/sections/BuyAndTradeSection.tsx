@@ -48,12 +48,14 @@ export function BuyAndTradeSection() {
                   <div className="border-r border-primary pr-4 md:pr-6">
                     <small className="text-primary">Amount</small>
                   </div>
-                  <input
-                    type="text"
-                    value="5,000"
-                    onChange={inputChangeHandler}
-                    className="text-right outline-none w-full"
-                  />
+                  <label>
+                    <input
+                      type="text"
+                      value="5,000"
+                      onChange={inputChangeHandler}
+                      className="text-right outline-none w-full"
+                    />
+                  </label>
                 </div>
                 <Select value="USD" onChange={undefined} />
               </div>
@@ -63,12 +65,14 @@ export function BuyAndTradeSection() {
                   <div className="border-r border-primary pr-4 md:pr-14">
                     <small className="text-primary">Get</small>
                   </div>
-                  <input
-                    type="text"
-                    value="0.10901"
-                    onChange={inputChangeHandler}
-                    className="text-right outline-none w-full"
-                  />
+                  <label>
+                    <input
+                      type="text"
+                      value="0.10901"
+                      onChange={inputChangeHandler}
+                      className="text-right outline-none w-full"
+                    />
+                  </label>
                 </div>
                 <Select value="BTC" onChange={undefined} />
               </div>

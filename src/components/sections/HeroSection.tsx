@@ -26,8 +26,8 @@ export function HeroSection() {
       viewport={{ once: true, amount: "some" }}
       className="bg-primary bg-opacity-5 relative px-32 pt-72 pb-24"
     >
-      <div className="container grid md:grid-cols-2 max-md:justify-items-center px-4 mx-auto">
-        <article>
+      <div className="container grid lg:grid-cols-2 max-md:justify-items-center max-md:justify-center px-4 mx-auto">
+        <article className="static">
           <motion.h6
             className="text-primary text-2xl"
             variants={fadeIn("right", "tween", 0.3, 2)}
@@ -96,7 +96,7 @@ export function HeroSection() {
           </motion.div>
           <PurpleCircleParticle className="absolute bottom-24 left-20" />
         </article>
-        <motion.figure className="hidden relative md:block">
+        <motion.figure className="hidden relative lg:block">
           <BlueCircleParticle className="absolute -top-24 left-32" />
           <motion.img
             variants={fadeIn("left", "tween", 0.3, 2)}

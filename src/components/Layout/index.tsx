@@ -9,7 +9,7 @@ export default function Layout({ children }: Props) {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <main className="overflow-hidden">{children}</main>
       <Footer />
     </>
   );

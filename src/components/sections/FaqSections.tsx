@@ -55,7 +55,7 @@ export function FaqSections() {
       whileInView="show"
       viewport={{ once: true, amount: "some" }}
     >
-      <div className="grid md:grid-cols-2">
+      <div className="grid lg:grid-cols-2">
         <motion.img
           variants={fadeIn("right", "tween", 0.3, 2)}
           src={illustrations.faqImage.image}

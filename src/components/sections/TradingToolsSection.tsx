@@ -21,7 +21,7 @@ export function TradingToolsSection() {
       viewport={{ once: true, amount: "some" }}
     >
       <div className="rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20">
-        <div className="grid md:grid-cols-2 max-md:justify-items-center gap-6">
+        <div className="grid lg:grid-cols-2 max-md:justify-items-center gap-6">
           <motion.div
             className="max-w-lg"
             variants={fadeIn("left", "tween", 0.3, 2)}

@@ -4,7 +4,7 @@ export function CryptoCurrencySection() {
   return (
     <section className="-mt-20 mx-12 relative px-10">
       <div className="container mx-auto rounded-3xl bg-white py-8 px-4 shadow">
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 max-sm:justify-center w-full">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 md:justify-center w-full">
           <div className="px-5 mb-6">
             <ListCoin title="🔥 Trending" data={trendCoins} more={""} />
           </div>

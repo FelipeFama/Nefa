@@ -1,4 +1,4 @@
-import Layout from "../components/Layout";
+import Layout from "../Layout";
 import { HeroSection } from "../components/sections/HeroSection";
 import { CryptoCurrencySection } from "../components/sections/CryptoCurrencySection";
 import { BuyAndTradeSection } from "../components/sections/BuyAndTradeSection";

@@ -1,22 +1,11 @@
-import chartup from "../../assets/images/charts/up.svg";
-import chartdown from "../../assets/images/charts/down.svg";
-
-export const chart = {
-  chartUp: {
-    image: chartup,
-    alt: "bitcoin chart",
-  },
-  chartDown: {
-    image: chartdown,
-    alt: "bitcoin chart",
-  },
-};
+import { charts } from "../../data/charts";
 
 interface CoinProps {
   image: string;
   coinName: string;
   coinPrice: number | string;
   coinUpTrend: boolean;
+  key: number;
 }
 
 export function CoinRow({
@@ -46,8 +35,8 @@ export function CoinRow({
       </div>
       <div>
         <img
-          src={coinUpTrend ? chart.chartUp.image : chart.chartDown.image}
-          alt={chart.chartUp.alt || chart.chartDown.alt}
+          src={coinUpTrend ? charts.chartUp.image : charts.chartDown.image}
+          alt={charts.chartUp.alt || charts.chartDown.alt}
         />
       </div>
     </div>

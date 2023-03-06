@@ -1,4 +1,4 @@
-import { trendCoins, gainerCoins, recentlyCoins, ListCoin } from "../ListCoin";
+import { ListCoin, gainerCoins, recentlyCoins, trendCoins } from "../ListCoin";
 
 export function CryptoCurrencySection() {
   return (

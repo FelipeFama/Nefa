@@ -1,29 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
-import partnerOne from "../../assets/images/partners/partner1.png";
-import partnerTwo from "../../assets/images/partners/partner2.png";
-import partnerThree from "../../assets/images/partners/partner3.png";
-import partnerFour from "../../assets/images/partners/partner4.png";
+import { illustrationsPartners } from "../../data/illustrations";
 import { slideIn } from "../../utils/motion";
-
-const partners = {
-  partnerOne: {
-    image: partnerOne,
-    alt: "partner one",
-  },
-  partnerTwo: {
-    image: partnerTwo,
-    alt: "partner two",
-  },
-  partnerThree: {
-    image: partnerThree,
-    alt: "partner three",
-  },
-  partnerFour: {
-    image: partnerFour,
-    alt: "partner four",
-  },
-};
 
 export function PartnerSection() {
   return (
@@ -46,26 +24,26 @@ export function PartnerSection() {
           <div className="mx-4">
             <figure className="grid lg:grid-cols-4 grid-cols-1 justify-items-center gap-6">
               <motion.img
-                src={partners.partnerOne.image}
-                alt={partners.partnerOne.alt}
+                src={illustrationsPartners.partnerOne.image}
+                alt={illustrationsPartners.partnerOne.alt}
                 className="basis-1/2"
                 variants={slideIn("right", "spring", 0.2, 2)}
               />
               <motion.img
-                src={partners.partnerTwo.image}
-                alt={partners.partnerTwo.alt}
+                src={illustrationsPartners.partnerTwo.image}
+                alt={illustrationsPartners.partnerTwo.alt}
                 className="basis-1/2"
                 variants={slideIn("right", "spring", 0.2, 3)}
               />
               <motion.img
-                src={partners.partnerThree.image}
-                alt={partners.partnerThree.alt}
+                src={illustrationsPartners.partnerThree.image}
+                alt={illustrationsPartners.partnerThree.alt}
                 className="basis-1/2"
                 variants={slideIn("right", "spring", 0.2, 4)}
               />
               <motion.img
-                src={partners.partnerFour.image}
-                alt={partners.partnerFour.alt}
+                src={illustrationsPartners.partnerFour.image}
+                alt={illustrationsPartners.partnerFour.alt}
                 className="basis-1/2"
                 variants={slideIn("right", "spring", 0.2, 5)}
               />

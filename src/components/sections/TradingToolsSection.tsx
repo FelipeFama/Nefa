@@ -1,16 +1,7 @@
 import { motion } from "framer-motion";
-import tradingToolImg from "../../assets/images/illustrations/tradingtools.png";
+import { illustrationTool } from "../../data/illustrations";
 import { fadeIn } from "../../utils/motion";
 import { SecondButton } from "../buttons/SecondButton";
-
-const illustrations = {
-  tradingToolImage: {
-    image: {
-      source: tradingToolImg,
-      alt: "trading tool",
-    },
-  },
-};
 
 export function TradingToolsSection() {
   return (
@@ -66,8 +57,8 @@ export function TradingToolsSection() {
           <figure className="row-start-1 mb-8">
             <motion.img
               variants={fadeIn("right", "tween", 0.3, 2)}
-              src={illustrations.tradingToolImage.image.source}
-              alt={illustrations.tradingToolImage.image.alt}
+              src={illustrationTool.tradingToolImage.image.source}
+              alt={illustrationTool.tradingToolImage.image.alt}
             />
           </figure>
         </div>

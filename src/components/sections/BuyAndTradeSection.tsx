@@ -1,17 +1,8 @@
 import { motion } from "framer-motion";
-import buyImg from "../../assets/images/illustrations/buy.png";
+import { illustrationBuy } from "../../data/illustrations";
 import { fadeIn } from "../../utils/motion";
 import { Select } from "../Select";
 import { SecondButton } from "../buttons/SecondButton";
-
-const illustrations = {
-  buyImage: {
-    image: {
-      source: buyImg,
-      alt: "buy crypto",
-    },
-  },
-};
 
 const formHandler = (e: any) => {
   e.preventDefault();
@@ -85,8 +76,8 @@ export function BuyAndTradeSection() {
         <figure className="row-start-1 xl:col-start-2">
           <motion.img
             variants={fadeIn("left", "tween", 0.3, 2)}
-            src={illustrations.buyImage.image.source}
-            alt={illustrations.buyImage.image.alt}
+            src={illustrationBuy.buyImage.image.source}
+            alt={illustrationBuy.buyImage.image.alt}
           />
         </figure>
       </div>

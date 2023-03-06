@@ -1,16 +1,7 @@
 import { motion } from "framer-motion";
 import { BsCheckCircleFill } from "react-icons/bs";
-import banksImg from "../../assets/images/illustrations/banks.png";
+import { illustrationBank } from "../../data/illustrations";
 import { fadeIn } from "../../utils/motion";
-
-const illustrations = {
-  bankImage: {
-    image: {
-      source: banksImg,
-      alt: "cryptocurrency vault",
-    },
-  },
-};
 
 export function SecuritySection() {
   return (
@@ -23,8 +14,8 @@ export function SecuritySection() {
       <div className="grid lg:grid-cols-2">
         <motion.img
           variants={fadeIn("right", "tween", 0.3, 2)}
-          src={illustrations.bankImage.image.source}
-          alt={illustrations.bankImage.image.alt}
+          src={illustrationBank.bankImage.image.source}
+          alt={illustrationBank.bankImage.image.alt}
         />
         <motion.article
           className="flex justify-center"

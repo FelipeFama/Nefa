@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaWindows, FaLinux, FaAppStore, FaAndroid } from "react-icons/fa";
-import globeImg from "../../assets/images/illustrations/globe.png";
+import { illustrationHero } from "../../data/illustrations";
 import { fadeIn } from "../../utils/motion";
 import { DropdownButton } from "../buttons/DropdownButton/DropdownButton";
 import { SecondButton } from "../buttons/SecondButton";
@@ -8,15 +8,6 @@ import { BlueCircleParticle } from "../particles/BlueCircleParticle";
 import { OrangeCircleParticle } from "../particles/OrangeCircleParticle";
 import { PurpleCircleParticle } from "../particles/PurpleCircleParticle";
 import { StarParticle } from "../particles/StarParticle";
-
-const illustrations = {
-  globeImage: {
-    image: {
-      source: globeImg,
-      alt: "crypto globe",
-    },
-  },
-};
 
 export function HeroSection() {
   return (
@@ -100,8 +91,8 @@ export function HeroSection() {
           <BlueCircleParticle className="absolute -top-24 left-32" />
           <motion.img
             variants={fadeIn("left", "tween", 0.3, 2)}
-            src={illustrations.globeImage.image.source}
-            alt={illustrations.globeImage.image.alt}
+            src={illustrationHero.globeImage.image.source}
+            alt={illustrationHero.globeImage.image.alt}
           />
           <OrangeCircleParticle className="absolute left-full top-56" />
         </motion.figure>

@@ -1,17 +1,8 @@
 import { motion } from "framer-motion";
 import { BsCheckCircleFill } from "react-icons/bs";
-import creditCardImg from "../../assets/images/illustrations/credit-card.png";
+import { illustrationCreditCard } from "../../data/illustrations";
 import { fadeIn } from "../../utils/motion";
 import { FirstButton } from "../buttons/FirstButton";
-
-const illustrations = {
-  creditCardImage: {
-    image: {
-      source: creditCardImg,
-      alt: "credit card",
-    },
-  },
-};
 
 export function CreditCardSection() {
   return (
@@ -25,8 +16,8 @@ export function CreditCardSection() {
         <figure className="mb-12 px-4 md:px-4">
           <motion.img
             variants={fadeIn("right", "tween", 0.3, 2)}
-            src={illustrations.creditCardImage.image.source}
-            alt={illustrations.creditCardImage.image.alt}
+            src={illustrationCreditCard.creditCardImage.image.source}
+            alt={illustrationCreditCard.creditCardImage.image.alt}
           />
         </figure>
         <motion.article

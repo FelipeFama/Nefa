@@ -1,31 +1,12 @@
 import { motion } from "framer-motion";
 import arrowImg from "../../assets/images/arrow.svg";
-import okayImg from "../../assets/images/illustrations/okay.png";
-import signUpImg from "../../assets/images/illustrations/signup.png";
-import walletImg from "../../assets/images/illustrations/wallet.png";
+import { illustrationsSteps } from "../../data/illustrations";
 import { slideIn } from "../../utils/motion";
 
 const arrow = {
   arrowImage: {
     image: arrowImg,
     alt: "arrow",
-  },
-};
-
-const illustrations = {
-  signUpImage: {
-    image: {
-      source: signUpImg,
-      alt: "mouse clicking on cryptocurrency",
-    },
-  },
-  walletImage: {
-    image: walletImg,
-    alt: "cryptocurrency wallet",
-  },
-  okayImage: {
-    image: okayImg,
-    alt: "hand holding cryptocurrency",
   },
 };
 
@@ -49,8 +30,8 @@ export function StepSection() {
             >
               <figure className="relative mx-2">
                 <img
-                  src={illustrations.signUpImage.image.source}
-                  alt={illustrations.signUpImage.image.alt}
+                  src={illustrationsSteps.signUpImage.image.source}
+                  alt={illustrationsSteps.signUpImage.image.alt}
                   className="mb-4 mx-auto hover:-translate-y-6 hover:scale-105 transition-all duration-300"
                 />
                 <img
@@ -72,8 +53,8 @@ export function StepSection() {
             >
               <figure className="relative mx-2">
                 <img
-                  src={illustrations.walletImage.image}
-                  alt={illustrations.walletImage.alt}
+                  src={illustrationsSteps.walletImage.image}
+                  alt={illustrationsSteps.walletImage.alt}
                   className="mb-4 mx-auto hover:-translate-y-6 hover:scale-105 transition-all duration-300"
                 />
                 <img
@@ -95,8 +76,8 @@ export function StepSection() {
             >
               <figure className="relative mx-2">
                 <img
-                  src={illustrations.okayImage.image}
-                  alt={illustrations.okayImage.alt}
+                  src={illustrationsSteps.okayImage.image}
+                  alt={illustrationsSteps.okayImage.alt}
                   className="mb-4 mx-auto hover:-translate-y-6 hover:scale-105 transition-all duration-300"
                 />
               </figure>

@@ -3,20 +3,13 @@ import classNames from "classnames";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { BsChevronUp } from "react-icons/bs";
-import faqImg from "../../assets/images/illustrations/faq.png";
+import { illustrationFaq } from "../../data/illustrations";
 import { fadeIn } from "../../utils/motion";
 interface FaqProps {
   open: boolean;
   title: string;
   children: string;
 }
-
-const illustrations = {
-  faqImage: {
-    image: faqImg,
-    alt: "faq criptocurrency",
-  },
-};
 
 const FaqItem = ({ open, title, children }: FaqProps) => {
   const [isOpen, setIsOpen] = useState(!!open);
@@ -58,8 +51,8 @@ export function FaqSections() {
       <div className="grid lg:grid-cols-2">
         <motion.img
           variants={fadeIn("right", "tween", 0.3, 2)}
-          src={illustrations.faqImage.image}
-          alt={illustrations.faqImage.alt}
+          src={illustrationFaq.faqImage.image}
+          alt={illustrationFaq.faqImage.alt}
         />
 
         <div className="flex justify-center">

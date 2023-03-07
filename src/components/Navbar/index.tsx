@@ -1,19 +1,10 @@
 import classNames from "classnames";
 import { useEffect, useState } from "react";
 import { BsList, BsX } from "react-icons/bs";
-import logoImg from "../../assets/images/logo.svg";
+import { logo } from "../../data/illustrations";
 import { FirstButton } from "../buttons/FirstButton";
 import { SecondButton } from "../buttons/SecondButton";
 import { Menu } from "./Menu";
-
-export const logo = {
-  logoImage: {
-    image: {
-      source: logoImg,
-      alt: "nefa logo",
-    },
-  },
-};
 
 export function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);

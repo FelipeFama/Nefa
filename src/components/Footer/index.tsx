@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { logo } from "../Navbar";
+import { logo } from "../../data/illustrations";
 import { SecondButton } from "../buttons/SecondButton";
 
 export function Footer() {

@@ -1,14 +1,6 @@
 import { motion } from "framer-motion";
-import arrowImg from "../../assets/images/arrow.svg";
-import { illustrationsSteps } from "../../data/illustrations";
+import { illustrationsSteps, arrowSteps } from "../../data/steps";
 import { slideIn } from "../../utils/motion";
-
-const arrow = {
-  arrowImage: {
-    image: arrowImg,
-    alt: "arrow",
-  },
-};
 
 export function StepSection() {
   return (
@@ -35,8 +27,8 @@ export function StepSection() {
                   className="mb-4 mx-auto hover:-translate-y-6 hover:scale-105 transition-all duration-300"
                 />
                 <img
-                  src={arrow.arrowImage.image}
-                  alt={arrow.arrowImage.alt}
+                  src={arrowSteps.arrowImage.image}
+                  alt={arrowSteps.arrowImage.alt}
                   className="hidden lg:block absolute top-1/2 -right-40"
                 />
               </figure>
@@ -58,8 +50,8 @@ export function StepSection() {
                   className="mb-4 mx-auto hover:-translate-y-6 hover:scale-105 transition-all duration-300"
                 />
                 <img
-                  src={arrow.arrowImage.image}
-                  alt={arrow.arrowImage.alt}
+                  src={arrowSteps.arrowImage.image}
+                  alt={arrowSteps.arrowImage.alt}
                   className="hidden lg:block absolute top-1/2 -right-40"
                 />
               </figure>

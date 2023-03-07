@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
-import { illustrationsPartners } from "../../data/illustrations";
+import { illustrationsPartners } from "../../data/partners";
 import { slideIn } from "../../utils/motion";
 
 export function PartnerSection() {

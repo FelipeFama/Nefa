@@ -1,3 +1,4 @@
-import hero from "./hero";
+import header from './header'
+import hero from './hero'
 
-export const schemaTypes = [hero]
+export const schemaTypes = [header, hero]

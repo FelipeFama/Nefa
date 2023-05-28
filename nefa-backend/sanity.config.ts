@@ -2,7 +2,7 @@ import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
-import {dataset, projectId} from './config/evironment'
+import {dataset, projectId} from './evironment'
 
 export default defineConfig({
   name: 'default',

@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import { DropdownMenu } from "./DropdownMenu";
 
 export function Menu() {

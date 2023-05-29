@@ -5,6 +5,5 @@
   "printWidth": 80,
   "tabWidth": 2,
   "endOfLine": "auto",
-  "arrowParens": "avoid",
-  "editor.formatOnSave": true
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import { Menu } from "./Menu";
 
 export default function Header() {

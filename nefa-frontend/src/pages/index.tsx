@@ -1,8 +1,10 @@
 import Header from "@/components/layout/Header";
-import { getStaticProps } from "@/utils/fetchData";
+import HeroSection from "@/components/sections/HeroSection";
+import { Props, getStaticProps } from "@/utils/fetchData";
 import Head from "next/head";
 
-export default function Home() {
+export default function Home({ hero }: Props) {
+  console.log(hero);
   return (
     <>
       <Head>
@@ -15,7 +17,7 @@ export default function Home() {
       </Head>
       <Header />
       <main className="overflow-hidden">
-        <div>nefa version in next</div>
+        <HeroSection hero={hero} />
       </main>
     </>
   );

@@ -14,7 +14,9 @@ export default function Home() {
         <title>Nefa</title>
       </Head>
       <Header />
-      <main className="overflow-hidden"></main>
+      <main className="overflow-hidden">
+        <div>nefa version in next</div>
+      </main>
     </>
   );
 }

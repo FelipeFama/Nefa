@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { DropdownMenu } from "./DropdownMenu";
+
 export function Menu() {
   return (
     <>
@@ -44,6 +46,24 @@ export function Menu() {
             Portfolio
           </Link>
         </li>
+        <DropdownMenu className="" onClick={undefined}>
+          <div className="py-4 max-md:-left-24">
+            <Link
+              className="hover:text-primary transition ease-in-out delay-100"
+              href="#"
+            >
+              Exchanges
+            </Link>
+          </div>
+          <div className="py-4 max-md:-left-24">
+            <Link
+              className="hover:text-primary transition ease-in-out delay-100"
+              href="#"
+            >
+              Wallets
+            </Link>
+          </div>
+        </DropdownMenu>
       </ul>
     </>
   );

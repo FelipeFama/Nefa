@@ -3,8 +3,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import { Props, getStaticProps } from "@/utils/fetchData";
 import Head from "next/head";
 
-export default function Home({ hero }: Props) {
-  console.log(hero);
+export default function Home({ header, hero }: Props) {
   return (
     <>
       <Head>
@@ -15,7 +14,7 @@ export default function Home({ hero }: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Nefa</title>
       </Head>
-      <Header />
+      <Header header={header} />
       <main className="overflow-hidden">
         <HeroSection hero={hero} />
       </main>

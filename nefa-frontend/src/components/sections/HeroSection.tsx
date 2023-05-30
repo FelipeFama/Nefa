@@ -25,7 +25,7 @@ interface HeroProps {
 export default function HeroSection({ hero }: HeroProps) {
   const item = hero[0];
   const descriptionParts = item.description;
-  console.log(item);
+
   return (
     <section className="bg-primary bg-opacity-5 relative px-32 pt-72 pb-24">
       <div className="container grid lg:grid-cols-2 max-md:justify-items-center max-md:justify-center px-4 mx-auto">

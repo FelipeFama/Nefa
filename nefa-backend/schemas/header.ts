@@ -6,13 +6,8 @@ export default {
     {
       name: 'image',
       title: 'Image',
-      type: 'object',
+      type: 'image',
       fields: [
-        {
-          name: 'image',
-          title: 'Image',
-          type: 'image',
-        },
         {
           name: 'alt',
           title: 'Alt',
@@ -21,21 +16,10 @@ export default {
       ],
     },
     {
-      name: 'lists',
-      title: 'Lists',
+      name: 'links',
+      title: 'Links',
       type: 'array',
-      of: [
-        {
-          type: 'object',
-          fields: [
-            {
-              name: 'link',
-              title: 'Link',
-              type: 'string',
-            },
-          ],
-        },
-      ],
+      of: [{type: 'string'}],
     },
   ],
 }

@@ -1,7 +1,14 @@
 import Link from "next/link";
+import { Header as MenuComponent } from ".";
 import { DropdownMenu } from "./DropdownMenu";
 
-export function Menu() {
+interface MenuProps {
+  header: MenuComponent[];
+}
+
+export function Menu({ header }: MenuProps) {
+  const item = header[0];
+  const menuList = item.links;
   return (
     <>
       <ul className="flex md:gap-8 gap-4 max-lg:flex-col">
@@ -10,7 +17,7 @@ export function Menu() {
             className="hover:text-primary transition ease-in-out delay-100"
             href="#"
           >
-            Crytocurrency
+            {menuList[0]}
           </Link>
         </li>
         <li>
@@ -18,7 +25,7 @@ export function Menu() {
             className="hover:text-primary transition ease-in-out delay-100"
             href="#"
           >
-            Exchanges
+            {menuList[1]}
           </Link>
         </li>
         <li>
@@ -26,7 +33,7 @@ export function Menu() {
             className="hover:text-primary transition ease-in-out delay-100"
             href="#"
           >
-            Watchlist
+            {menuList[2]}
           </Link>
         </li>
         <li>
@@ -34,7 +41,7 @@ export function Menu() {
             className="hover:text-primary transition ease-in-out delay-100"
             href="#"
           >
-            NFT
+            {menuList[3]}
           </Link>
         </li>
         <li>
@@ -42,7 +49,7 @@ export function Menu() {
             className="hover:text-primary transition ease-in-out delay-100"
             href="#"
           >
-            Portfolio
+            {menuList[4]}
           </Link>
         </li>
         <DropdownMenu className="" onClick={undefined}>

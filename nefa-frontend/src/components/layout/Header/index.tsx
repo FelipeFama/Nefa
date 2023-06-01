@@ -26,6 +26,17 @@ export default function Header({ header }: HeaderProps) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [backgroundWhite, setBackgroundWhite] = useState(false);
 
+  const handleWindowScroll = () => {
+    const height = window.scrollY;
+    const tresholdHeigth = 50;
+
+    if (height > tresholdHeigth) {
+      setBackgroundWhite(true);
+    } else {
+      setBackgroundWhite(false);
+    }
+  };
+
   const handleBlackScreenClick = (e: any) => {
     e.stopPropagation();
     setDropdownOpen(false);
@@ -34,6 +45,11 @@ export default function Header({ header }: HeaderProps) {
   useEffect(() => {
     setBackgroundWhite(dropdownOpen);
   }, [dropdownOpen]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleWindowScroll);
+    return () => window.removeEventListener("scroll", handleWindowScroll);
+  }, []);
 
   const item = header[0];
   return (

@@ -1,3 +1,5 @@
+import { FirstButton } from "@/components/buttons/FirstButton";
+import { SecondButton } from "@/components/buttons/SecondButton";
 import { client } from "@/lib/sanity";
 import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
@@ -37,6 +39,14 @@ export default function Header({ header }: HeaderProps) {
           <div className="xl:flex gap-8 hidden">
             <Menu header={header} />
           </div>
+        </div>
+        <div className="md:hidden sm:ml-80 text-2xl">
+          <FirstButton className={""} onClick={undefined}>
+            Log In
+          </FirstButton>
+          <SecondButton className={""} onClick={undefined}>
+            Sign Up
+          </SecondButton>
         </div>
       </nav>
     </header>

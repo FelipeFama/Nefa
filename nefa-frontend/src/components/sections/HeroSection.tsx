@@ -1,6 +1,9 @@
 import { client } from "@/lib/sanity";
 import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
+import { FaWindows, FaLinux, FaAppStore, FaAndroid } from "react-icons/fa";
+import { DropdownButton } from "../buttons/DropdownButton";
+import { SecondButton } from "../buttons/SecondButton";
 
 export interface Hero {
   title: {
@@ -48,11 +51,46 @@ export default function HeroSection({ hero }: HeroProps) {
             // eslint-disable-next-line react-hooks/rules-of-hooks
             {...useNextSanityImage(client, item.image.asset._ref)}
             alt={item.image.alt}
-            width={500}
-            height={500}
+            width={800}
+            height={800}
             priority={false}
           />
         </figure>
+      </div>
+      <div className="col-span-2 lg:flex gap-4 lg:mb-12 w-96 lg:w-max">
+        <SecondButton className="w-full lg:w-auto mb-2" onClick={undefined}>
+          Get Started
+        </SecondButton>
+        <DropdownButton name="Download App" className="w-full lg:w-auto">
+          <a
+            href="/download/windows"
+            target="_blank"
+            className="w-full hover:bg-primary px-6 pt-4 pb-2 block hover:text-white"
+          >
+            <FaWindows className="inline mr-2" /> Windows
+          </a>
+          <a
+            href="/download/linux"
+            target="_blank"
+            className="w-full hover:bg-primary px-6 pt-4 pb-2 block hover:text-white"
+          >
+            <FaLinux className="inline mr-2" /> Linux
+          </a>
+          <a
+            href="/download/android"
+            target="_blank"
+            className="w-full hover:bg-primary px-6 pt-4 pb-2 block hover:text-white"
+          >
+            <FaAndroid className="inline mr-2" /> Android
+          </a>
+          <a
+            href="/download/ios"
+            target="_blank"
+            className="w-full hover:bg-primary px-6 pt-4 pb-2 block hover:text-white"
+          >
+            <FaAppStore className="inline mr-2" /> IOS
+          </a>
+        </DropdownButton>
       </div>
     </section>
   );

@@ -14,8 +14,8 @@ export default {
           type: 'string',
         },
         {
-          name: 'span',
-          title: 'Span',
+          name: 'text',
+          title: 'Text',
           type: 'string',
         },
         {

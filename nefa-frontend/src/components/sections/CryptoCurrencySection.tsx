@@ -1,6 +1,7 @@
 import { client } from "@/lib/sanity";
 import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
+import React from "react";
 import emoji from "react-easy-emoji";
 import { BsChevronRight } from "react-icons/bs";
 
@@ -31,7 +32,6 @@ interface CoinsProps {
 }
 
 export function CryptoCurrencySection({ coins }: CoinsProps) {
-  console.log(coins);
   const { trendcoins, gainercoins, recentlycoins } = coins;
 
   return (
@@ -42,7 +42,7 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
           <div className="px-5 mb-6">
             <div className="flex justify-between mb-6">
               <span className="font-bold text-lg flex gap-4 items-center">
-                {emoji("🔥 Trending")}
+                {emoji("🔥")} Trending
               </span>
               <a href="#" className="text-primary cursor-pointer">
                 More
@@ -54,10 +54,10 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
               <span className="text-gray">Price</span>
               <span className="text-gray">Chart</span>
             </div>
-            {trendcoins.map((coin) => (
-              <>
+            {trendcoins.map((coin, index) => (
+              <React.Fragment key={index}>
                 <div className="grid grid-cols-3 mb-2 py-2 border-b border-lightgray text-sm w-max">
-                  <div className="flex items-center" key={coin.text}>
+                  <div className="flex items-center">
                     <figure>
                       <Image
                         // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -89,14 +89,14 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
                     />
                   </figure>
                 </div>
-              </>
+              </React.Fragment>
             ))}
           </div>
           {/* gainer coins */}
           <div className="px-5 mb-6">
             <div className="flex justify-between mb-6">
               <span className="font-bold text-lg flex gap-4 items-center">
-                {emoji("🚀  Top Gainers")}
+                🚀 Top Gainers
               </span>
               <a href="#" className="text-primary cursor-pointer">
                 More
@@ -108,10 +108,10 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
               <span className="text-gray">Price</span>
               <span className="text-gray">Chart</span>
             </div>
-            {gainercoins.map((coin) => (
-              <>
+            {gainercoins.map((coin, index) => (
+              <React.Fragment key={index}>
                 <div className="grid grid-cols-3 mb-2 py-2 border-b border-lightgray text-sm w-max">
-                  <div className="flex items-center" key={coin.text}>
+                  <div className="flex items-center">
                     <figure>
                       <Image
                         // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -143,14 +143,14 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
                     />
                   </figure>
                 </div>
-              </>
+              </React.Fragment>
             ))}
           </div>
           {/* recently coins */}
           <div className="px-5 mb-6">
             <div className="flex justify-between mb-6">
               <span className="font-bold text-lg flex gap-4 items-center">
-                {emoji("💎  Recently Added")}
+                💎 Recently Added
               </span>
               <a href="#" className="text-primary cursor-pointer">
                 More
@@ -162,10 +162,10 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
               <span className="text-gray">Price</span>
               <span className="text-gray">Chart</span>
             </div>
-            {recentlycoins.map((coin) => (
-              <>
+            {recentlycoins.map((coin, index) => (
+              <React.Fragment key={index}>
                 <div className="grid grid-cols-3 mb-2 py-2 border-b border-lightgray text-sm w-max">
-                  <div className="flex items-center" key={coin.text}>
+                  <div className="flex items-center">
                     <figure>
                       <Image
                         // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -197,7 +197,7 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
                     />
                   </figure>
                 </div>
-              </>
+              </React.Fragment>
             ))}
           </div>
         </div>

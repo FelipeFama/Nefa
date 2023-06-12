@@ -5,7 +5,6 @@ import { Props, getStaticProps } from "@/utils/fetchData";
 import Head from "next/head";
 
 export default function Home({ header, hero, coins }: Props) {
-  console.log(coins);
   return (
     <>
       <Head>

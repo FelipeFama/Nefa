@@ -1,9 +1,11 @@
 import Header from "@/components/layout/Header";
+import { CryptoCurrencySection } from "@/components/sections/CryptoCurrencySection";
 import HeroSection from "@/components/sections/HeroSection";
 import { Props, getStaticProps } from "@/utils/fetchData";
 import Head from "next/head";
 
-export default function Home({ header, hero }: Props) {
+export default function Home({ header, hero, coins }: Props) {
+  console.log(coins);
   return (
     <>
       <Head>
@@ -17,6 +19,7 @@ export default function Home({ header, hero }: Props) {
       <Header header={header} />
       <main className="overflow-hidden">
         <HeroSection hero={hero} />
+        <CryptoCurrencySection coins={coins} />
       </main>
     </>
   );

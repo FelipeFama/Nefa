@@ -57,18 +57,18 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
             {trendcoins.map((coin, index) => (
               <React.Fragment key={index}>
                 <div className="grid grid-cols-3 mb-2 py-2 border-b border-lightgray text-sm w-max">
-                  <div className="flex items-center">
-                    <figure>
-                      <Image
-                        // eslint-disable-next-line react-hooks/rules-of-hooks
-                        {...useNextSanityImage(client, coin.image.asset._ref)}
-                        alt={coin.image.alt}
-                        object-fit="cover"
-                        priority={false}
-                      />
-                      {coin.text}
-                    </figure>
-                  </div>
+                  <figure className="flex items-center">
+                    <Image
+                      // eslint-disable-next-line react-hooks/rules-of-hooks
+                      {...useNextSanityImage(client, coin.image.asset._ref)}
+                      alt={coin.image.alt}
+                      object-fit="cover"
+                      priority={false}
+                      className="inline w-[1em] h-[1em] mr-2 align-middle"
+                    />
+                    {coin.text}
+                  </figure>
+
                   <div className="flex items-center">
                     {coin.span === "+" ? (
                       <span className="text-green mr-1">{coin.span}</span>
@@ -109,18 +109,18 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
             {gainercoins.map((coin, index) => (
               <React.Fragment key={index}>
                 <div className="grid grid-cols-3 mb-2 py-2 border-b border-lightgray text-sm w-max">
-                  <div className="flex items-center">
-                    <figure>
-                      <Image
-                        // eslint-disable-next-line react-hooks/rules-of-hooks
-                        {...useNextSanityImage(client, coin.image.asset._ref)}
-                        alt={coin.image.alt}
-                        object-fit="cover"
-                        priority={false}
-                      />
-                      {coin.text}
-                    </figure>
-                  </div>
+                  <figure className="flex items-center">
+                    <Image
+                      // eslint-disable-next-line react-hooks/rules-of-hooks
+                      {...useNextSanityImage(client, coin.image.asset._ref)}
+                      alt={coin.image.alt}
+                      object-fit="cover"
+                      priority={false}
+                      className="inline w-[1em] h-[1em] mr-2 align-middle"
+                    />
+                    {coin.text}
+                  </figure>
+
                   <div className="flex items-center">
                     {coin.span === "+" ? (
                       <span className="text-green mr-1">{coin.span}</span>
@@ -161,18 +161,18 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
             {recentlycoins.map((coin, index) => (
               <React.Fragment key={index}>
                 <div className="grid grid-cols-3 mb-2 py-2 border-b border-lightgray text-sm w-max">
-                  <div className="flex items-center">
-                    <figure>
-                      <Image
-                        // eslint-disable-next-line react-hooks/rules-of-hooks
-                        {...useNextSanityImage(client, coin.image.asset._ref)}
-                        alt={coin.image.alt}
-                        object-fit="cover"
-                        priority={false}
-                      />
-                      {coin.text}
-                    </figure>
-                  </div>
+                  <figure className="flex items-center">
+                    <Image
+                      // eslint-disable-next-line react-hooks/rules-of-hooks
+                      {...useNextSanityImage(client, coin.image.asset._ref)}
+                      alt={coin.image.alt}
+                      object-fit="cover"
+                      priority={false}
+                      className="inline w-[1em] h-[1em] mr-2 align-middle"
+                    />
+                    {coin.text}
+                  </figure>
+
                   <div className="flex items-center">
                     {coin.span === "+" ? (
                       <span className="text-green mr-1">{coin.span}</span>

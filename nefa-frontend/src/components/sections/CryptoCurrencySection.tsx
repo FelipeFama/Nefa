@@ -16,7 +16,7 @@ export interface Coins {
   span: string;
   price: string;
   chartImage: {
-    alt: string;
+    chartAlt: string;
     asset: {
       _ref: string;
     };
@@ -81,7 +81,7 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
                     <Image
                       // eslint-disable-next-line react-hooks/rules-of-hooks
                       {...useNextSanityImage(client, coin.chartImage.asset)}
-                      alt={coin.chartImage.alt}
+                      alt={coin.chartImage.chartAlt}
                       object-fit="cover"
                       priority={false}
                     />
@@ -133,7 +133,7 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
                     <Image
                       // eslint-disable-next-line react-hooks/rules-of-hooks
                       {...useNextSanityImage(client, coin.chartImage.asset)}
-                      alt={coin.chartImage.alt}
+                      alt={coin.chartImage.chartAlt}
                       object-fit="cover"
                       priority={false}
                     />
@@ -185,7 +185,7 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
                     <Image
                       // eslint-disable-next-line react-hooks/rules-of-hooks
                       {...useNextSanityImage(client, coin.chartImage.asset)}
-                      alt={coin.chartImage.alt}
+                      alt={coin.chartImage.chartAlt}
                       object-fit="cover"
                       priority={false}
                     />

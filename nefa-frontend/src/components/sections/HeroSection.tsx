@@ -57,7 +57,7 @@ export default function HeroSection({ hero }: HeroProps) {
           />
         </figure>
       </div>
-      <div className="col-span-2 lg:flex gap-4 lg:mb-12 w-96 lg:w-max">
+      <div className="col-span-2 lg:flex gap-4 lg:mb-12 w-max">
         <SecondButton className="w-full lg:w-auto mb-2" onClick={undefined}>
           Get Started
         </SecondButton>

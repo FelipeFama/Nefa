@@ -35,8 +35,8 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
   const { trendcoins, gainercoins, recentlycoins } = coins;
 
   return (
-    <section className="-mt-20 mx-12 relative px-10">
-      <div className="container mx-auto rounded-3xl bg-white py-8 px-4 shadow">
+    <section className="-mt-20 mx-12 relative px-5 lg:px-10 max-sm:flex max-sm:justify-center">
+      <div className="max-md:w-[max-content] lg:container mx-auto rounded-3xl bg-white py-8 lg:px-4 shadow">
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 md:justify-center w-full">
           {/* trending coins */}
           <div className="px-5 mb-6">

@@ -63,14 +63,13 @@ export default function Header({ header }: HeaderProps) {
     >
       <nav className="flex items-center gap-48 max-lg:w-full max-lg:justify-between md:gap-20">
         <div className="flex items-center">
-          <figure className="sm:mx-8 m-auto">
+          <figure className="sm:mx-8 m-auto w-[auto] xl:w-[10vw]">
             <Image
               // eslint-disable-next-line react-hooks/rules-of-hooks
               {...useNextSanityImage(client, item.image.asset._ref)}
               className="h-12 max-sm:mx-8 mr-8"
               alt={item.image.alt}
-              width={150}
-              height={100}
+              object-fit="cover"
               priority={false}
             />
           </figure>
@@ -78,7 +77,7 @@ export default function Header({ header }: HeaderProps) {
             <Menu header={header} />
           </div>
         </div>
-        <div className="hidden md:flex gap-3 mx-4 w-3/12">
+        <div className="hidden md:flex gap-3 mx-4 w-3/12 md:w-2/4">
           <FirstButton className={""} onClick={undefined}>
             Log In
           </FirstButton>

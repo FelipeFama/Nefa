@@ -5,6 +5,7 @@ export interface Props {
   header: any;
   hero: any;
   coins: any;
+  buy: any;
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -17,12 +18,14 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       "recentlycoins": recentlycoins[] { text, image, alt, price, span, chartImage }
     }
  `);
+  const buy = await client.fetch(`*[_type == "buy"]`);
 
   return {
     props: {
       header,
       hero,
       coins,
+      buy,
     },
   };
 };

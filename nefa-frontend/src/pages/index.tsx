@@ -1,10 +1,11 @@
 import Header from "@/components/layout/Header";
+import { BuyAndTradeSection } from "@/components/sections/BuyAndTradeSection";
 import { CryptoCurrencySection } from "@/components/sections/CryptoCurrencySection";
 import HeroSection from "@/components/sections/HeroSection";
 import { Props, getStaticProps } from "@/utils/fetchData";
 import Head from "next/head";
 
-export default function Home({ header, hero, coins }: Props) {
+export default function Home({ header, hero, coins, buy }: Props) {
   return (
     <>
       <Head>
@@ -19,6 +20,7 @@ export default function Home({ header, hero, coins }: Props) {
       <main className="overflow-hidden">
         <HeroSection hero={hero} />
         <CryptoCurrencySection coins={coins} />
+        <BuyAndTradeSection buy={buy} />
       </main>
     </>
   );

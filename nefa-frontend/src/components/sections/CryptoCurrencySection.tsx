@@ -1,6 +1,7 @@
 import { client } from "@/lib/sanity";
 import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import emoji from "react-easy-emoji";
 import { BsChevronRight } from "react-icons/bs";
@@ -30,7 +31,6 @@ interface CoinsProps {
     recentlycoins: Coins[];
   };
 }
-
 export function CryptoCurrencySection({ coins }: CoinsProps) {
   const { trendcoins, gainercoins, recentlycoins } = coins;
 
@@ -42,12 +42,12 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
           <div className="px-5 mb-6">
             <div className="flex justify-between mb-6">
               <span className="font-bold text-lg flex gap-4 items-center">
-                {emoji("🔥")} Trending
+                {emoji("🔥 Trending")}
               </span>
-              <a href="#" className="text-primary cursor-pointer">
+              <Link href="#" className="text-primary cursor-pointer">
                 More
                 <BsChevronRight className="inline ml-2" />
-              </a>
+              </Link>
             </div>
             <div className="grid grid-cols-3 mb-4 text-base">
               <span className="text-gray">Name</span>
@@ -94,12 +94,12 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
           <div className="px-5 mb-6">
             <div className="flex justify-between mb-6">
               <span className="font-bold text-lg flex gap-4 items-center">
-                🚀 Top Gainers
+                {emoji("🚀 Top Gainers")}
               </span>
-              <a href="#" className="text-primary cursor-pointer">
+              <Link href="#" className="text-primary cursor-pointer">
                 More
                 <BsChevronRight className="inline ml-2" />
-              </a>
+              </Link>
             </div>
             <div className="grid grid-cols-3 mb-4 text-base">
               <span className="text-gray">Name</span>
@@ -146,12 +146,12 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
           <div className="px-5 mb-6">
             <div className="flex justify-between mb-6">
               <span className="font-bold text-lg flex gap-4 items-center">
-                💎 Recently Added
+                {emoji("💎 Recently Added")}
               </span>
-              <a href="#" className="text-primary cursor-pointer">
+              <Link href="#" className="text-primary cursor-pointer">
                 More
                 <BsChevronRight className="inline ml-2" />
-              </a>
+              </Link>
             </div>
             <div className="grid grid-cols-3 mb-4 text-base">
               <span className="text-gray">Name</span>

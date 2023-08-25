@@ -72,7 +72,7 @@ export function BuyAndTradeSection({ buy }: BuyProps) {
                   </label>
                 </div>
                 <SelectCurrencyButton
-                  value="USD"
+                  value="BTC"
                   onChange={handleCurrencyChange}
                 />
               </div>
@@ -92,7 +92,7 @@ export function BuyAndTradeSection({ buy }: BuyProps) {
                   </label>
                 </div>
                 <SelectCurrencyButton
-                  value="BTC"
+                  value="USD"
                   onChange={handleCurrencyChange}
                 />
               </div>

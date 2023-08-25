@@ -3,6 +3,7 @@ import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
 import { SecondButton } from "../buttons/SecondButton";
 import { SelectCurrencyButton } from "../buttons/SelectCurrencyButton";
+import { useState } from "react";
 
 export interface Buy {
   title: {
@@ -31,9 +32,15 @@ const inputChangeHandler = (e: any) => {
 };
 
 export function BuyAndTradeSection({ buy }: BuyProps) {
+  const [selectedCurrency, setSelectedCurrency] = useState<any[]>([]);
+
   const item = buy[0];
   const descriptionParts = item.description;
-  console.log(item);
+
+  const handleCurrencyChange = (selectedCurrency: any) => {
+    setSelectedCurrency(selectedCurrency);
+  };
+
   return (
     <section className="container mx-auto mt-24 flex items-center">
       <div className="grid lg:grid-cols-2 max-md:justify-items-center gap-10 px-16 lg:p-12">
@@ -64,7 +71,10 @@ export function BuyAndTradeSection({ buy }: BuyProps) {
                     />
                   </label>
                 </div>
-                <SelectCurrencyButton value="USD" onChange={undefined} />
+                <SelectCurrencyButton
+                  value="USD"
+                  onChange={handleCurrencyChange}
+                />
               </div>
 
               <div className="flex justify-between gap-4 md:gap-6 mb-6">
@@ -81,7 +91,10 @@ export function BuyAndTradeSection({ buy }: BuyProps) {
                     />
                   </label>
                 </div>
-                <SelectCurrencyButton value="BTC" onChange={undefined} />
+                <SelectCurrencyButton
+                  value="BTC"
+                  onChange={handleCurrencyChange}
+                />
               </div>
             </form>
             <SecondButton className="w-full" onClick={undefined}>

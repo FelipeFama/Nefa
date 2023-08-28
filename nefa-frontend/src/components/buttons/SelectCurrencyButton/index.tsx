@@ -73,7 +73,7 @@ export function SelectCurrencyButton({ onChange, value = "" }: Props) {
             <Menu.Items
               static
               className={classNames(
-                "absolute top-full right-0 left-0 bg-white mt-4 rounded-xl shadow-xl border border-primary overflow-hidden",
+                "absolute top-full right-0 -left-[1px] bg-white mt-4 rounded-xl shadow-xl border border-primary overflow-hidden",
                 {
                   invisible: !open,
                   "opacity-0": !open,

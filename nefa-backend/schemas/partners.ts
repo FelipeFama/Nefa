@@ -26,14 +26,21 @@ export default {
       type: 'array',
       of: [
         {
-          name: 'image',
-          title: 'Image',
-          type: 'image',
+          name: 'partnerimage',
+          title: 'Partner Image',
+          type: 'object',
           fields: [
             {
-              name: 'alt',
-              title: 'Alt',
-              type: 'string',
+              name: 'image',
+              title: 'Image',
+              type: 'image',
+              fields: [
+                {
+                  name: 'alt',
+                  title: 'Alt',
+                  type: 'string',
+                },
+              ],
             },
           ],
         },

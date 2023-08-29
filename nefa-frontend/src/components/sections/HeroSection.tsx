@@ -25,7 +25,7 @@ interface HeroProps {
   hero: Hero[];
 }
 
-export default function HeroSection({ hero }: HeroProps) {
+export function HeroSection({ hero }: HeroProps) {
   const item = hero[0];
   const descriptionParts = item.description;
 

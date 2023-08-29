@@ -6,6 +6,7 @@ export interface Props {
   hero: any;
   coins: any;
   buy: any;
+  partners: any;
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -19,6 +20,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     }
  `);
   const buy = await client.fetch(`*[_type == "buy"]`);
+  const partners = await client.fetch(`*[_type == "partners"]`);
 
   return {
     props: {
@@ -26,6 +28,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       hero,
       coins,
       buy,
+      partners,
     },
   };
 };

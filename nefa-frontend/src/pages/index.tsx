@@ -1,12 +1,23 @@
 import Header from "@/components/layout/Header";
 import { BuyAndTradeSection } from "@/components/sections/BuyAndTradeSection";
+import { CreditCard } from "@/components/sections/CreditCard";
 import { CryptoCurrencySection } from "@/components/sections/CryptoCurrencySection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { PartnersSection } from "@/components/sections/PartnersSection";
+import { TradingSection } from "@/components/sections/TradingSection";
 import { Props, getStaticProps } from "@/utils/fetchData";
 import Head from "next/head";
 
-export default function Home({ header, hero, coins, buy, partners }: Props) {
+export default function Home({
+  header,
+  hero,
+  coins,
+  buy,
+  partners,
+  credit,
+  trading,
+}: Props) {
+  console.log(trading);
   return (
     <>
       <Head>
@@ -23,6 +34,8 @@ export default function Home({ header, hero, coins, buy, partners }: Props) {
         <CryptoCurrencySection coins={coins} />
         <BuyAndTradeSection buy={buy} />
         <PartnersSection partners={partners} />
+        <CreditCard credit={credit} />
+        <TradingSection trading={trading} />
       </main>
     </>
   );

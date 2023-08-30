@@ -5,5 +5,6 @@ import buy from './buy'
 import partners from './partners'
 import credit from './credit'
 import trading from './trading'
+import security from './security'
 
-export const schemaTypes = [header, hero, coins, buy, partners, credit, trading]
+export const schemaTypes = [header, hero, coins, buy, partners, credit, trading, security]

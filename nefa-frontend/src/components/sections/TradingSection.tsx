@@ -34,7 +34,7 @@ export function TradingSection({ trading }: TradingProps) {
           className="rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20"
         >
           <div className="grid lg:grid-cols-2 max-md:justify-items-center gap-6">
-            <div className="max-w-lg row-start-1 ml-12">
+            <div className="max-w-lg lg:row-start-1 ml-12">
               <h2 className="font-bold text-4xl mb-6 leading-normal">
                 {item.title.text1}
                 <span className="text-blue-gradient">{item.title.span}</span>
@@ -52,7 +52,7 @@ export function TradingSection({ trading }: TradingProps) {
                 Learn More
               </a>
             </div>
-            <figure className="mb-8">
+            <figure className="mb-8 row-start-1">
               <Image
                 // eslint-disable-next-line react-hooks/rules-of-hooks
                 {...useNextSanityImage(client, item.image.asset._ref)}

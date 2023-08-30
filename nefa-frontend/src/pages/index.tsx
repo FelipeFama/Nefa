@@ -17,7 +17,6 @@ export default function Home({
   credit,
   trading,
 }: Props) {
-  console.log(trading);
   return (
     <>
       <Head>

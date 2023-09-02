@@ -4,6 +4,7 @@ import { CreditCard } from "@/components/sections/CreditCard";
 import { CryptoCurrencySection } from "@/components/sections/CryptoCurrencySection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { PartnersSection } from "@/components/sections/PartnersSection";
+import { SecuritySection } from "@/components/sections/SecuritySection";
 import { TradingSection } from "@/components/sections/TradingSection";
 import { Props, getStaticProps } from "@/utils/fetchData";
 import Head from "next/head";
@@ -16,6 +17,7 @@ export default function Home({
   partners,
   credit,
   trading,
+  security,
 }: Props) {
   return (
     <>
@@ -35,6 +37,7 @@ export default function Home({
         <PartnersSection partners={partners} />
         <CreditCard credit={credit} />
         <TradingSection trading={trading} />
+        <SecuritySection security={security} />
       </main>
     </>
   );

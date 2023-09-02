@@ -51,5 +51,17 @@ export default {
         },
       ],
     },
+    {
+      name: 'arrowImage',
+      title: 'arrow Image',
+      type: 'image',
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alt',
+          type: 'string',
+        },
+      ],
+    },
   ],
 }

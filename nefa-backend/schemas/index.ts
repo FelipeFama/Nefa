@@ -8,6 +8,7 @@ import trading from './trading'
 import security from './security'
 import step from './step'
 import faq from './faq'
+import footer from './footer'
 
 export const schemaTypes = [
   header,
@@ -20,4 +21,5 @@ export const schemaTypes = [
   security,
   step,
   faq,
+  footer,
 ]

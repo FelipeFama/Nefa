@@ -16,6 +16,11 @@ export default {
       ],
     },
     {
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'string',
+    },
+    {
       name: 'title',
       title: 'Title',
       type: 'object',

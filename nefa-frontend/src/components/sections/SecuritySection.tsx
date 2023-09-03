@@ -25,7 +25,6 @@ interface SecurityProps {
 }
 
 export function SecuritySection({ security }: SecurityProps) {
-  console.log(security);
   return (
     <section className="container mx-auto py-32">
       {security.map((item, index) => (

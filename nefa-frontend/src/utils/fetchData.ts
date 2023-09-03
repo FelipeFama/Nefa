@@ -10,6 +10,8 @@ export interface Props {
   credit: any;
   trading: any;
   security: any;
+  step: any;
+  faq: any;
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -27,6 +29,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const credit = await client.fetch(`*[_type == "credit"]`);
   const trading = await client.fetch(`*[_type == "trading"]`);
   const security = await client.fetch(`*[_type == "security"]`);
+  const step = await client.fetch(`*[_type == "step"]`);
+  const faq = await client.fetch(`*[_type == "faq"]`);
 
   return {
     props: {
@@ -38,6 +42,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       credit,
       trading,
       security,
+      step,
+      faq,
     },
   };
 };

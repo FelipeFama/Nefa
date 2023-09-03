@@ -1,4 +1,6 @@
+import { Footer } from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import { BackToTopSection } from "@/components/sections/BackToTopSection";
 import { BuyAndTradeSection } from "@/components/sections/BuyAndTradeSection";
 import { CreditCard } from "@/components/sections/CreditCard";
 import { CryptoCurrencySection } from "@/components/sections/CryptoCurrencySection";
@@ -22,6 +24,7 @@ export default function Home({
   security,
   step,
   faq,
+  footer,
 }: Props) {
   return (
     <>
@@ -44,7 +47,9 @@ export default function Home({
         <SecuritySection security={security} />
         <StepSection step={step} />
         <FaqSection faq={faq} />
+        <BackToTopSection />
       </main>
+      <Footer footer={footer} />
     </>
   );
 }

@@ -12,6 +12,7 @@ export interface Props {
   security: any;
   step: any;
   faq: any;
+  footer: any;
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -31,6 +32,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const security = await client.fetch(`*[_type == "security"]`);
   const step = await client.fetch(`*[_type == "step"]`);
   const faq = await client.fetch(`*[_type == "faq"]`);
+  const footer = await client.fetch(
+    `*[_type == "footer"] | order(_createdAt asc)`,
+  );
 
   return {
     props: {
@@ -44,6 +48,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       security,
       step,
       faq,
+      footer,
     },
   };
 };

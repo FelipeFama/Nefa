@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { client } from "@/lib/sanity";
 import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
-import { BsChevronUp } from "react-icons/bs";
+import { BsChevronDown } from "react-icons/bs";
 import classNames from "classnames";
 
 export interface Faq {
@@ -50,7 +50,7 @@ const FaqItem = ({ open, title, children }: FaqProps) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         {title}
-        <BsChevronUp className={iconClass} />
+        <BsChevronDown className={iconClass} />
       </aside>
       <aside className={contentClass}>
         <p className="select-none">{children}</p>

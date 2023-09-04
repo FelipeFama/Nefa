@@ -3,25 +3,10 @@ import { BsCheckCircleFill } from "react-icons/bs";
 import { client } from "@/lib/sanity";
 import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
-
-export interface Security {
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
-  title: {
-    text1: string;
-  };
-  articles: {
-    span: string;
-    description: string;
-  }[];
-}
+import { Security as SecurityComponent } from "@/types/sections/security";
 
 interface SecurityProps {
-  security: Security[];
+  security: SecurityComponent[];
 }
 
 export function SecuritySection({ security }: SecurityProps) {

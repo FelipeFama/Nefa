@@ -4,28 +4,10 @@ import Image from "next/image";
 import React from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { FirstButton } from "../buttons/FirstButton";
-
-export interface Credit {
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
-  title: {
-    span: string;
-    text1: string;
-    text2: string;
-  };
-  subtitle: {
-    text1: string;
-    span: string;
-  };
-  list: string[];
-}
+import { Credit as CreditComponent } from "@/types/sections/credit";
 
 interface CreditProps {
-  credit: Credit[];
+  credit: CreditComponent[];
 }
 
 export function CreditCard({ credit }: CreditProps) {

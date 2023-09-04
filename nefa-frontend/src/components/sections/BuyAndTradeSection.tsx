@@ -4,23 +4,10 @@ import Image from "next/image";
 import { SecondButton } from "../buttons/SecondButton";
 import { SelectCurrencyButton } from "../buttons/SelectCurrencyButton";
 import { useState } from "react";
-
-export interface Buy {
-  title: {
-    text1: string;
-    text2: string;
-  };
-  description: string;
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
-}
+import { Buy as BuyComponent } from "@/types/sections/buy";
 
 interface BuyProps {
-  buy: Buy[];
+  buy: BuyComponent[];
 }
 
 const formHandler = (e: any) => {

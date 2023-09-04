@@ -2,24 +2,10 @@ import { client } from "@/lib/sanity";
 import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
 import React from "react";
-
-export interface Partners {
-  title: {
-    text1: string;
-  };
-  description: string;
-  partner: {
-    image: {
-      alt: string;
-      asset: {
-        _ref: string;
-      };
-    };
-  }[];
-}
+import { Partners as PartnersComponents } from "@/types/sections/partners";
 
 interface PartnerProps {
-  partners: Partners[];
+  partners: PartnersComponents[];
 }
 
 export const PartnersSection = ({ partners }: PartnerProps) => {

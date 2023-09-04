@@ -4,25 +4,10 @@ import Image from "next/image";
 import { FaWindows, FaLinux, FaAppStore, FaAndroid } from "react-icons/fa";
 import { DropdownButton } from "../buttons/DropdownButton";
 import { SecondButton } from "../buttons/SecondButton";
-
-export interface Hero {
-  title: {
-    span: string;
-    text1: string;
-    text2: string;
-  };
-  subtitle: string;
-  description: string;
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
-}
+import { Hero as HeroComponent } from "@/types/sections/hero";
 
 interface HeroProps {
-  hero: Hero[];
+  hero: HeroComponent[];
 }
 
 export function HeroSection({ hero }: HeroProps) {

@@ -5,32 +5,16 @@ import Link from "next/link";
 import React from "react";
 import emoji from "react-easy-emoji";
 import { BsChevronRight } from "react-icons/bs";
-
-export interface Coins {
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
-  text: string;
-  span: string;
-  price: string;
-  chartImage: {
-    chartAlt: string;
-    asset: {
-      _ref: string;
-    };
-  };
-}
+import { Coins as CoinsComponents } from "@/types/sections/crypto";
 
 interface CoinsProps {
   coins: {
-    trendcoins: Coins[];
-    gainercoins: Coins[];
-    recentlycoins: Coins[];
+    trendcoins: CoinsComponents[];
+    gainercoins: CoinsComponents[];
+    recentlycoins: CoinsComponents[];
   };
 }
+
 export function CryptoCurrencySection({ coins }: CoinsProps) {
   const { trendcoins, gainercoins, recentlycoins } = coins;
 

@@ -2,31 +2,10 @@ import React from "react";
 import { client } from "@/lib/sanity";
 import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
-
-export interface Step {
-  title: {
-    text1: string;
-  };
-  article: {
-    title: string;
-    content: string;
-    image: {
-      alt: string;
-      asset: {
-        _ref: string;
-      };
-    };
-  }[];
-  arrowImage: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
-}
+import { Step as StepComponent } from "@/types/sections/step";
 
 interface StepProps {
-  step: Step[];
+  step: StepComponent[];
 }
 
 export function StepSection({ step }: StepProps) {

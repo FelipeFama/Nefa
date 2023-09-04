@@ -3,26 +3,10 @@ import { SecondButton } from "../buttons/SecondButton";
 import { client } from "@/lib/sanity";
 import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
-
-export interface Trading {
-  title: {
-    text1: string;
-    span: string;
-  };
-  articles: {
-    title: string;
-    description: string;
-  }[];
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
-}
+import { Trading as TradingComponent } from "@/types/sections/trading";
 
 interface TradingProps {
-  trading: Trading[];
+  trading: TradingComponent[];
 }
 
 export function TradingSection({ trading }: TradingProps) {

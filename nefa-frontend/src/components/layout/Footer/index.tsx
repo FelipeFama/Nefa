@@ -4,21 +4,10 @@ import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
 import { SecondButton } from "@/components/buttons/SecondButton";
-
-export interface Footer {
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
-  links: string[];
-  links2: string[];
-  links3: string[];
-}
+import { Footer as FooterComponent } from "@/types/layout/footer";
 
 interface FooterProps {
-  footer: Footer[];
+  footer: FooterComponent[];
 }
 
 export function Footer({ footer }: FooterProps) {

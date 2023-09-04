@@ -10,7 +10,8 @@ import { PartnersSection } from "@/components/sections/PartnersSection";
 import { SecuritySection } from "@/components/sections/SecuritySection";
 import { StepSection } from "@/components/sections/StepSection";
 import { TradingSection } from "@/components/sections/TradingSection";
-import { Props, getStaticProps } from "@/utils/fetchData";
+import { Props } from "@/types";
+import { getStaticProps } from "@/utils/fetchData";
 import Head from "next/head";
 
 export default function Home({

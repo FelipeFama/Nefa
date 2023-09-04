@@ -1,19 +1,6 @@
 import { client } from "@/lib/sanity";
+import { Props } from "@/types";
 import { GetStaticProps } from "next";
-
-export interface Props {
-  header: any;
-  hero: any;
-  coins: any;
-  buy: any;
-  partners: any;
-  credit: any;
-  trading: any;
-  security: any;
-  step: any;
-  faq: any;
-  footer: any;
-}
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const header = await client.fetch(

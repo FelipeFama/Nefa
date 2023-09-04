@@ -7,19 +7,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BsList, BsX } from "react-icons/bs";
 import { Menu } from "./Menu";
-
-export interface Header {
-  image: {
-    alt: string;
-    asset: {
-      _ref: string;
-    };
-  };
-  links: string;
-}
+import { Header as HeaderComponent } from "@/types/layout/header";
 
 interface HeaderProps {
-  header: Header[];
+  header: HeaderComponent[];
 }
 
 export default function Header({ header }: HeaderProps) {

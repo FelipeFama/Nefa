@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Header as MenuComponent } from ".";
+import { Header as MenuComponent } from "@/types/layout/header";
 import { DropdownMenu } from "./DropdownMenu";
 
 interface MenuProps {

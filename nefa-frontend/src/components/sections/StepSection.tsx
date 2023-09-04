@@ -27,7 +27,7 @@ export function StepSection({ step }: StepProps) {
                       alt={arr.image.alt}
                       object-fit="cover"
                       priority={false}
-                      className="mb-4 mx-auto hover:-translate-y-6 hover:scale-105 transition-all duration-300"
+                      className="mb-4 cursor-pointer mx-auto hover:-translate-y-6 hover:scale-105 transition-all duration-300"
                     />
                     {index < 2 && (
                       <Image

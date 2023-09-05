@@ -5,6 +5,8 @@ import { SecondButton } from "../buttons/SecondButton";
 import { SelectCurrencyButton } from "../buttons/SelectCurrencyButton";
 import { useState } from "react";
 import { Buy as BuyComponent } from "@/types/sections/buy";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 interface BuyProps {
   buy: BuyComponent[];
@@ -29,10 +31,18 @@ export function BuyAndTradeSection({ buy }: BuyProps) {
   };
 
   return (
-    <section className="container mx-auto mt-24 flex items-center">
+    <motion.section
+      className="container mx-auto mt-24 flex items-center"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       <div className="grid lg:grid-cols-2 max-md:justify-items-center gap-10 px-16 lg:p-12">
         <div className="flex items-center md:justify-center">
-          <div className="max-w-xl">
+          <motion.div
+            className="max-w-xl"
+            variants={fadeIn("right", "tween", 0.2, 2)}
+          >
             <h2 className="font-bold text-4xl mb-6 leading-normal">
               {item.title.text1}
               <br />
@@ -87,9 +97,12 @@ export function BuyAndTradeSection({ buy }: BuyProps) {
             <SecondButton className="w-full" onClick={undefined}>
               Buy Now
             </SecondButton>
-          </div>
+          </motion.div>
         </div>
-        <figure className="row-start-1 xl:col-start-2">
+        <motion.figure
+          className="row-start-1 xl:col-start-2"
+          variants={fadeIn("left", "tween", 0.3, 2)}
+        >
           <Image
             // eslint-disable-next-line react-hooks/rules-of-hooks
             {...useNextSanityImage(client, item.image.asset._ref)}
@@ -98,8 +111,8 @@ export function BuyAndTradeSection({ buy }: BuyProps) {
             height={800}
             priority={false}
           />
-        </figure>
+        </motion.figure>
       </div>
-    </section>
+    </motion.section>
   );
 }

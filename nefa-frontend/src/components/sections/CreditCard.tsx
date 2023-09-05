@@ -5,6 +5,8 @@ import React from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { FirstButton } from "../buttons/FirstButton";
 import { Credit as CreditComponent } from "@/types/sections/credit";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 interface CreditProps {
   credit: CreditComponent[];
@@ -12,11 +14,19 @@ interface CreditProps {
 
 export function CreditCard({ credit }: CreditProps) {
   return (
-    <section className="container mx-auto py-32">
+    <motion.section
+      className="container mx-auto py-32"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       <div className="grid lg:grid-cols-2 gap-6">
         {credit.map((item, index) => (
           <React.Fragment key={index}>
-            <figure className="mb-12 px-4 md:px-4">
+            <motion.figure
+              className="mb-12 px-4 md:px-4"
+              variants={fadeIn("right", "tween", 0.3, 2)}
+            >
               <Image
                 key={index}
                 // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -25,8 +35,11 @@ export function CreditCard({ credit }: CreditProps) {
                 object-fit="cover"
                 priority={false}
               />
-            </figure>
-            <article className="flex justify-center">
+            </motion.figure>
+            <motion.article
+              className="flex justify-center"
+              variants={fadeIn("left", "tween", 0.3, 2)}
+            >
               <div className="max-w-md">
                 <h2 className="font-bold text-4xl mb-6 leading-normal">
                   {item.title.text1}
@@ -49,10 +62,10 @@ export function CreditCard({ credit }: CreditProps) {
                   Join the waitlist
                 </FirstButton>
               </div>
-            </article>
+            </motion.article>
           </React.Fragment>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

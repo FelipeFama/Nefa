@@ -3,14 +3,22 @@ import { client } from "@/lib/sanity";
 import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
 import { Step as StepComponent } from "@/types/sections/step";
+import { motion } from "framer-motion";
+import { slideIn } from "@/utils/motion";
 
 interface StepProps {
   step: StepComponent[];
 }
 
 export function StepSection({ step }: StepProps) {
+  console.log(step);
   return (
-    <section className="px-8">
+    <motion.section
+      className="px-8"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       <div className="rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20">
         {step.map((item, index) => (
           <div key={index} className="container mx-auto text-center">
@@ -19,7 +27,17 @@ export function StepSection({ step }: StepProps) {
             </h2>
             <div className="lg:flex grid justify-center gap-24">
               {item.article.map((arr, index) => (
-                <article key={index} className="text-center relative px-4 mx-2">
+                <motion.article
+                  key={index}
+                  className="text-center relative px-4 mx-2"
+                  variants={
+                    index === 0
+                      ? slideIn("right", "spring", 0.2, 3)
+                      : index === 1
+                      ? slideIn("right", "spring", 0.2, 4)
+                      : slideIn("right", "spring", 0.2, 5)
+                  }
+                >
                   <figure className="relative mx-2">
                     <Image
                       // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -45,12 +63,12 @@ export function StepSection({ step }: StepProps) {
                   </figure>
                   <h3 className="text-2xl font-bold mb-4">{arr.title}</h3>
                   <p className="text-gray max-w-sm">{arr.content}</p>
-                </article>
+                </motion.article>
               ))}
             </div>
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

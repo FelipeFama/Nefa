@@ -5,6 +5,8 @@ import Image from "next/image";
 import { BsChevronDown } from "react-icons/bs";
 import classNames from "classnames";
 import { Faq as FaqComponent } from "@/types/sections/faq";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 interface FaqProps {
   faq: FaqComponent[];
@@ -45,18 +47,28 @@ const FaqItem = ({ open, title, children }: FaqProps) => {
 
 export function FaqSection({ faq }: FaqProps) {
   return (
-    <section className="container mx-auto py-32">
+    <motion.section
+      className="container mx-auto py-32"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       {faq.map((item, index) => (
         <div key={index} className="grid lg:grid-cols-2">
-          <Image
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            {...useNextSanityImage(client, item.image.asset._ref)}
-            alt={item.image.alt}
-            object-fit="cover"
-            priority={false}
-          />
+          <motion.figure variants={fadeIn("right", "tween", 0.3, 2)}>
+            <Image
+              // eslint-disable-next-line react-hooks/rules-of-hooks
+              {...useNextSanityImage(client, item.image.asset._ref)}
+              alt={item.image.alt}
+              object-fit="cover"
+              priority={false}
+            />
+          </motion.figure>
           <article className="flex justify-center">
-            <div className="max-w-xl">
+            <motion.div
+              className="max-w-xl"
+              variants={fadeIn("left", "tween", 0.3, 2)}
+            >
               <span className="text-primary">{item.subtitle}</span>
               <h2 className="font-bold text-4xl mb-6 leading-normal">
                 {item.title.text1}
@@ -68,10 +80,10 @@ export function FaqSection({ faq }: FaqProps) {
                   </FaqItem>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </article>
         </div>
       ))}
-    </section>
+    </motion.section>
   );
 }

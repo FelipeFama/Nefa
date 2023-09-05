@@ -4,6 +4,8 @@ import { client } from "@/lib/sanity";
 import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
 import { Security as SecurityComponent } from "@/types/sections/security";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 interface SecurityProps {
   security: SecurityComponent[];
@@ -11,17 +13,27 @@ interface SecurityProps {
 
 export function SecuritySection({ security }: SecurityProps) {
   return (
-    <section className="container mx-auto py-32">
+    <motion.section
+      className="container mx-auto py-32"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       {security.map((item, index) => (
         <div key={index} className="grid lg:grid-cols-2">
-          <Image
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            {...useNextSanityImage(client, item.image.asset._ref)}
-            alt={item.image.alt}
-            object-fit="cover"
-            priority={false}
-          />
-          <article className="flex justify-center">
+          <motion.figure variants={fadeIn("right", "tween", 0.3, 2)}>
+            <Image
+              // eslint-disable-next-line react-hooks/rules-of-hooks
+              {...useNextSanityImage(client, item.image.asset._ref)}
+              alt={item.image.alt}
+              object-fit="cover"
+              priority={false}
+            />
+          </motion.figure>
+          <motion.article
+            className="flex justify-center"
+            variants={fadeIn("left", "tween", 0.3, 2)}
+          >
             <div className="max-w-xl">
               <h2 className="font-bold text-4xl mb-6 leading-normal">
                 {item.title.text1}
@@ -38,9 +50,9 @@ export function SecuritySection({ security }: SecurityProps) {
                 ))}
               </ul>
             </div>
-          </article>
+          </motion.article>
         </div>
       ))}
-    </section>
+    </motion.section>
   );
 }

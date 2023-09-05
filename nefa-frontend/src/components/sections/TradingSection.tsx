@@ -4,6 +4,8 @@ import { client } from "@/lib/sanity";
 import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
 import { Trading as TradingComponent } from "@/types/sections/trading";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 interface TradingProps {
   trading: TradingComponent[];
@@ -11,14 +13,22 @@ interface TradingProps {
 
 export function TradingSection({ trading }: TradingProps) {
   return (
-    <section className="px-6">
+    <motion.section
+      className="px-6"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
+    >
       {trading.map((item, index) => (
         <div
           key={index}
           className="rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20"
         >
           <div className="grid lg:grid-cols-2 max-md:justify-items-center gap-6">
-            <div className="max-w-lg lg:row-start-1 ml-12">
+            <motion.div
+              className="max-w-lg lg:row-start-1 ml-12"
+              variants={fadeIn("right", "tween", 0.3, 2)}
+            >
               <h2 className="font-bold text-4xl mb-6 leading-normal">
                 {item.title.text1}
                 <span className="text-blue-gradient">{item.title.span}</span>
@@ -35,8 +45,11 @@ export function TradingSection({ trading }: TradingProps) {
               <a href="#" className="py-4 px-10 text-primary underline">
                 Learn More
               </a>
-            </div>
-            <figure className="mb-8 row-start-1">
+            </motion.div>
+            <motion.figure
+              className="mb-8 row-start-1"
+              variants={fadeIn("left", "tween", 0.3, 2)}
+            >
               <Image
                 // eslint-disable-next-line react-hooks/rules-of-hooks
                 {...useNextSanityImage(client, item.image.asset._ref)}
@@ -44,10 +57,10 @@ export function TradingSection({ trading }: TradingProps) {
                 object-fit="cover"
                 priority={false}
               />
-            </figure>
+            </motion.figure>
           </div>
         </div>
       ))}
-    </section>
+    </motion.section>
   );
 }

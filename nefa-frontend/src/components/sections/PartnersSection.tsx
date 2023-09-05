@@ -11,6 +11,7 @@ interface PartnerProps {
 }
 
 export const PartnersSection = ({ partners }: PartnerProps) => {
+  console.log(partners);
   return (
     <motion.section
       className="px-6"
@@ -28,7 +29,15 @@ export const PartnersSection = ({ partners }: PartnerProps) => {
                 <div className="grid lg:grid-cols-4 grid-cols-1 justify-items-center gap-6">
                   {partner.partner.map((item, index) => (
                     <motion.figure
-                      variants={slideIn("right", "spring", 0.2, 2)}
+                      variants={
+                        index === 0
+                          ? slideIn("right", "spring", 0.2, 2)
+                          : index === 1
+                          ? slideIn("right", "spring", 0.2, 3)
+                          : index === 2
+                          ? slideIn("right", "spring", 0.2, 4)
+                          : slideIn("right", "spring", 0.2, 5)
+                      }
                       key={index}
                     >
                       <Image

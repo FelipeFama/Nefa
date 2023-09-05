@@ -11,7 +11,6 @@ interface PartnerProps {
 }
 
 export const PartnersSection = ({ partners }: PartnerProps) => {
-  console.log(partners);
   return (
     <motion.section
       className="px-6"

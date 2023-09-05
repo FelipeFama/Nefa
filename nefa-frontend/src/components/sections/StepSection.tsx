@@ -11,7 +11,6 @@ interface StepProps {
 }
 
 export function StepSection({ step }: StepProps) {
-  console.log(step);
   return (
     <motion.section
       className="px-8"

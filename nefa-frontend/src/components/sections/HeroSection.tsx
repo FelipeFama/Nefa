@@ -4,7 +4,12 @@ import Image from "next/image";
 import { FaWindows, FaLinux, FaAppStore, FaAndroid } from "react-icons/fa";
 import { DropdownButton } from "../buttons/DropdownButton";
 import { SecondButton } from "../buttons/SecondButton";
+
 import { Hero as HeroComponent } from "@/types/sections/hero";
+import StarParticle from "../particles/StarParticle";
+import BlueCircleParticle from "../particles/BlueCircleParticle";
+import PurpleCircleParticle from "../particles/PurpleCircleParticle ";
+import OrangeCircleParticle from "../particles/OrangeCircleParticle";
 
 interface HeroProps {
   hero: HeroComponent[];
@@ -19,6 +24,10 @@ export function HeroSection({ hero }: HeroProps) {
       <div className="container grid lg:grid-cols-2 max-md:justify-items-center max-md:justify-center px-4 mx-auto">
         <article className="static">
           <h6 className="text-primary text-2xl">{item.subtitle}</h6>
+          <StarParticle
+            className="absolute top-36 right-2/4 w-32"
+            particle={hero}
+          />
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-normal">
             {item.title.text1}
             <br />
@@ -30,15 +39,26 @@ export function HeroSection({ hero }: HeroProps) {
             <p className="text-gray">{descriptionParts[0]}</p>
             <p className="text-gray">{descriptionParts[1]}</p>
           </div>
+          <PurpleCircleParticle
+            className="absolute bottom-24 left-20"
+            particle={hero}
+          />
         </article>
         <figure className="hidden relative lg:block">
+          <BlueCircleParticle
+            className="absolute -top-24 left-32"
+            particle={hero}
+          />
           <Image
             // eslint-disable-next-line react-hooks/rules-of-hooks
             {...useNextSanityImage(client, item.image.asset._ref)}
             alt={item.image.alt}
-            width={800}
-            height={800}
+            object-fit="cover"
             priority={false}
+          />
+          <OrangeCircleParticle
+            className="absolute left-[95%] top-56"
+            particle={hero}
           />
         </figure>
       </div>

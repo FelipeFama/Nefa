@@ -48,5 +48,31 @@ export default {
         },
       ],
     },
+    {
+      name: 'particles',
+      title: 'Particles',
+      type: 'array',
+      of: [
+        {
+          name: 'particle',
+          title: 'Particle',
+          type: 'object',
+          fields: [
+            {
+              name: 'image',
+              title: 'Image',
+              type: 'image',
+              fields: [
+                {
+                  name: 'alt',
+                  title: 'Alt',
+                  type: 'string',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 }

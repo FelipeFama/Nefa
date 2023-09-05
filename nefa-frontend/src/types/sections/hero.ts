@@ -12,4 +12,12 @@ export interface Hero {
       _ref: string;
     };
   };
+  particles: {
+    image: {
+      alt: string;
+      asset: {
+        _ref: string;
+      };
+    };
+  }[];
 }

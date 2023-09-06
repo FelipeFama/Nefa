@@ -1,5 +1,4 @@
-import { Footer } from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
+import Layout from "@/components/layout";
 import { BackToTopSection } from "@/components/sections/BackToTopSection";
 import { BuyAndTradeSection } from "@/components/sections/BuyAndTradeSection";
 import { CreditCard } from "@/components/sections/CreditCard";
@@ -10,9 +9,12 @@ import { PartnersSection } from "@/components/sections/PartnersSection";
 import { SecuritySection } from "@/components/sections/SecuritySection";
 import { StepSection } from "@/components/sections/StepSection";
 import { TradingSection } from "@/components/sections/TradingSection";
+import { getStaticProps } from "@/lib/fetchData";
 import { Props } from "@/types";
-import { getStaticProps } from "@/utils/fetchData";
+
 import Head from "next/head";
+
+export { getStaticProps };
 
 export default function Home({
   header,
@@ -37,8 +39,7 @@ export default function Home({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Nefa</title>
       </Head>
-      <Header header={header} />
-      <main className="overflow-hidden">
+      <Layout header={header} footer={footer}>
         <HeroSection hero={hero} />
         <CryptoCurrencySection coins={coins} />
         <BuyAndTradeSection buy={buy} />
@@ -49,10 +50,7 @@ export default function Home({
         <StepSection step={step} />
         <FaqSection faq={faq} />
         <BackToTopSection />
-      </main>
-      <Footer footer={footer} />
+      </Layout>
     </>
   );
 }
-
-export { getStaticProps };

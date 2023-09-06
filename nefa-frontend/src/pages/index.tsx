@@ -1,4 +1,4 @@
-import Layout from "@/components/layout";
+import Layout from "@/layout";
 import { BackToTopSection } from "@/components/sections/BackToTopSection";
 import { BuyAndTradeSection } from "@/components/sections/BuyAndTradeSection";
 import { CreditCard } from "@/components/sections/CreditCard";

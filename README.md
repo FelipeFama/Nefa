@@ -44,3 +44,7 @@ Back-end:
 - A cryptocurrency landing page.
 - UI/UX  by [Irvan Moses](https://dribbble.com/irvan_moses)
 - Project link in figma: [NEFA](https://www.figma.com/file/xxnIkkDxUIG4N6zO5jRH5Z/NEFA---Cryptocurrency-Web-App-(Community)?node-id=0%3A1)
+- Semantic HTML5 markup
+- Grid and Flex
+- Media queries and responsivity
+- Frontend connection with cms sanity

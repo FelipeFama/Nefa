@@ -27,13 +27,13 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
   return (
     <section className="-mt-20 mx-12 relative px-5 lg:px-10 max-sm:flex max-sm:justify-center">
       <div className="max-md:w-[max-content] lg:container mx-auto rounded-3xl bg-white py-8 lg:px-4 shadow">
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 md:justify-center w-full">
+        <article className="grid lg:grid-cols-2 xl:grid-cols-3 md:justify-center w-full">
           {/* trending coins */}
-          <div className="px-5 mb-6">
+          <aside className="px-5 mb-6">
             <div className="flex justify-between mb-6">
-              <span className="font-bold text-lg flex gap-4 items-center">
+              <figure className="font-bold text-lg flex gap-4 items-center">
                 {isClient ? emoji("🔥 Trending") : ""}
-              </span>
+              </figure>
               <Link href="#" className="text-primary cursor-pointer">
                 More
                 <BsChevronRight className="inline ml-2" />
@@ -59,14 +59,14 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
                     {coin.text}
                   </figure>
 
-                  <div className="flex items-center">
+                  <p className="flex items-center">
                     {coin.span === "+" ? (
                       <span className="text-green mr-1">{coin.span}</span>
                     ) : (
                       <span className="text-red mr-1">{coin.span}</span>
                     )}
                     {coin.price}
-                  </div>
+                  </p>
                   <figure>
                     <Image
                       // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -79,13 +79,13 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
                 </div>
               </React.Fragment>
             ))}
-          </div>
+          </aside>
           {/* gainer coins */}
-          <div className="px-5 mb-6">
+          <aside className="px-5 mb-6">
             <div className="flex justify-between mb-6">
-              <span className="font-bold text-lg flex gap-4 items-center">
+              <figure className="font-bold text-lg flex gap-4 items-center">
                 {isClient ? emoji("🚀 Top Gainers") : ""}
-              </span>
+              </figure>
               <Link href="#" className="text-primary cursor-pointer">
                 More
                 <BsChevronRight className="inline ml-2" />
@@ -111,14 +111,14 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
                     {coin.text}
                   </figure>
 
-                  <div className="flex items-center">
+                  <p className="flex items-center">
                     {coin.span === "+" ? (
                       <span className="text-green mr-1">{coin.span}</span>
                     ) : (
                       <span className="text-red mr-1">{coin.span}</span>
                     )}
                     {coin.price}
-                  </div>
+                  </p>
                   <figure>
                     <Image
                       // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -131,13 +131,13 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
                 </div>
               </React.Fragment>
             ))}
-          </div>
+          </aside>
           {/* recently coins */}
-          <div className="px-5 mb-6">
+          <aside className="px-5 mb-6">
             <div className="flex justify-between mb-6">
-              <span className="font-bold text-lg flex gap-4 items-center">
+              <figure className="font-bold text-lg flex gap-4 items-center">
                 {isClient ? emoji("💎 Recently Added") : ""}
-              </span>
+              </figure>
               <Link href="#" className="text-primary cursor-pointer">
                 More
                 <BsChevronRight className="inline ml-2" />
@@ -163,14 +163,14 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
                     {coin.text}
                   </figure>
 
-                  <div className="flex items-center">
+                  <p className="flex items-center">
                     {coin.span === "+" ? (
                       <span className="text-green mr-1">{coin.span}</span>
                     ) : (
                       <span className="text-red mr-1">{coin.span}</span>
                     )}
                     {coin.price}
-                  </div>
+                  </p>
                   <figure>
                     <Image
                       // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -183,8 +183,8 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
                 </div>
               </React.Fragment>
             ))}
-          </div>
-        </div>
+          </aside>
+        </article>
       </div>
     </section>
   );

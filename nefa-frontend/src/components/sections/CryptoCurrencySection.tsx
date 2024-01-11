@@ -2,7 +2,7 @@ import { client } from "@/lib/sanity";
 import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import emoji from "react-easy-emoji";
 import { BsChevronRight } from "react-icons/bs";
 import { Coins as CoinsComponents } from "@/types/sections/crypto";
@@ -18,6 +18,12 @@ interface CoinsProps {
 export function CryptoCurrencySection({ coins }: CoinsProps) {
   const { trendcoins, gainercoins, recentlycoins } = coins;
 
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <section className="-mt-20 mx-12 relative px-5 lg:px-10 max-sm:flex max-sm:justify-center">
       <div className="max-md:w-[max-content] lg:container mx-auto rounded-3xl bg-white py-8 lg:px-4 shadow">
@@ -26,7 +32,7 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
           <div className="px-5 mb-6">
             <div className="flex justify-between mb-6">
               <span className="font-bold text-lg flex gap-4 items-center">
-                {emoji("🔥 Trending")}
+                {isClient ? emoji("🔥 Trending") : ""}
               </span>
               <Link href="#" className="text-primary cursor-pointer">
                 More
@@ -78,7 +84,7 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
           <div className="px-5 mb-6">
             <div className="flex justify-between mb-6">
               <span className="font-bold text-lg flex gap-4 items-center">
-                {emoji("🚀 Top Gainers")}
+                {isClient ? emoji("🚀 Top Gainers") : ""}
               </span>
               <Link href="#" className="text-primary cursor-pointer">
                 More
@@ -130,7 +136,7 @@ export function CryptoCurrencySection({ coins }: CoinsProps) {
           <div className="px-5 mb-6">
             <div className="flex justify-between mb-6">
               <span className="font-bold text-lg flex gap-4 items-center">
-                {emoji("💎 Recently Added")}
+                {isClient ? emoji("💎 Recently Added") : ""}
               </span>
               <Link href="#" className="text-primary cursor-pointer">
                 More

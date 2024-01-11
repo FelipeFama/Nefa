@@ -7,6 +7,7 @@ interface Coin {
   name: string;
   code: string;
   icon: string;
+  alt: string;
 }
 
 interface Props {
@@ -20,16 +21,19 @@ export function SelectCurrencyButton({ onChange, value = "" }: Props) {
       name: "BTC",
       code: "BTC",
       icon: "btc.svg",
+      alt: "Bitcoin",
     },
     {
       name: "USD",
       code: "USD",
       icon: "usd.svg",
+      alt: "Dollar",
     },
     {
       name: "ETH",
       code: "ETH",
-      icon: "etherium.png",
+      icon: "Etherium.png",
+      alt: "Etherium",
     },
   ];
 
@@ -52,7 +56,7 @@ export function SelectCurrencyButton({ onChange, value = "" }: Props) {
             <figure className="w-[26px] pr-2">
               <img
                 src={valueSelected?.icon}
-                alt={valueSelected?.name}
+                alt={valueSelected?.alt}
                 className="flex items-center"
               />
             </figure>

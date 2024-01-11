@@ -59,9 +59,10 @@ export function BuyAndTradeSection({ buy }: BuyProps) {
                   <div className="border-r border-primary pr-4 md:pr-6">
                     <small className="text-primary">Amount</small>
                   </div>
-                  <label>
+                  <label htmlFor="firstvalue">
                     <input
                       type="text"
+                      id="firstvalue"
                       value="5,000"
                       onChange={inputChangeHandler}
                       className="text-right outline-none w-full"
@@ -79,9 +80,10 @@ export function BuyAndTradeSection({ buy }: BuyProps) {
                   <div className="border-r border-primary pr-4 md:pr-14">
                     <small className="text-primary">Get</small>
                   </div>
-                  <label>
+                  <label htmlFor="secondvalue">
                     <input
                       type="text"
+                      id="secondvalue"
                       value="0.10901"
                       onChange={inputChangeHandler}
                       className="text-right outline-none w-full"

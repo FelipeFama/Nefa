@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ducanh2912/next-pwa": "^10.2.1",
     "@headlessui/react": "^1.7.14",
     "@types/node": "20.2.5",
     "@types/react": "18.2.7",
